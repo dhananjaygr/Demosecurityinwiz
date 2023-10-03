@@ -29,9 +29,9 @@ The individual participant should be able to complete this session in approximat
 
 ## Instructions
 Complete each section accordingly:
-* Concept review. Jot down your answer and review with your cohort.
-* Seek & Find. Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
-* Graph Query. 
+- Concept review. Jot down your answer and review with your cohort.
+- Seek & Find. Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
+- Graph Query. 
 
 ## Exercise 1. Concept Review
 
