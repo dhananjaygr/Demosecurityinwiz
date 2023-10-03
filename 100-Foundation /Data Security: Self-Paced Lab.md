@@ -29,9 +29,9 @@ The individual participant should be able to complete this session in approximat
 
 ## Instructions
 Complete each section accordingly:
-- Concept review. Jot down your answer and review with your cohort.
-- Seek & Find. Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
-- Graph Query. 
+- **Concept review.** Jot down your answer and review with your cohort.
+- **Seek & Find.** Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
+- **Graph Query.** Review each task and navigate to the answer in demo.wiz.io. Because the cloud is dynamic and new findings are inevitable, answers should not be "specific." Instead, they should be in the form of navigation Condition + Property filter(s) + narrowing condition + property filter(s) + etc. (if helpful).  You may use any accelerators or tips to initiate your queries.
 
 ## Exercise 1. Concept Review
 
