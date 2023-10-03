@@ -68,7 +68,7 @@ Complete each section accordingly:
 1. What two types of settings need to be configured to enable DSPM in Wiz?
 A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for sensitive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
 2. How do the Wiz DSPM features fit within the broader context of data security?
-A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively porrect sensitive and regulated data. It is not a data governance solution.
+A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively protect sensitive and regulated data. It is not a data governance/data retention solution.
 3. What are the key graph resource objects that contain a sensitive data finding?
 A: Answers include: data store, data schema, buckets, databases, database servers, data resources (generic term to collect them all).
 BONUS: Why doesn't a volume have a data finding? All data findings are attached to the workload, not to the volume. The advantage of this approach is that we can see all of the affected resources that mount a shared volume.
@@ -88,7 +88,7 @@ A: RegEx is used to define a data classifier. However, you can use Rego to valid
 A: You can achieve this multiple ways, but the fastest way is Explorer > Data Findings and filter by Location. 
 https://demo.wiz.io/data-findings#~(groupBy~'location~filters~())
 2. How do you find which data volumes on a VM actually have a data finding? 
-A: 
+A: Looking at the workload, you can see the data findings and the path where the finding lives. However, you cannot directly determine which volume is affected; it requires working knowledge of the environment. For example, if the path is /share/users/*, then it is likely an NFS share and a noo-boot volume. 
 3. Where do you define a custom classifier?
 A: Policies > Data Classification Rules > Create Data Classification Rule
 4. I wanted to exclude scanning of private buckets in a specific region. Where can specify this?
