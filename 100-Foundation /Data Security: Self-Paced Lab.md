@@ -4,8 +4,8 @@
 
 Welcome to the Wiz DSPM lab. In this lab, you will:
 - Review key concepts from the 100 DSPM in Wiz Overview and Demo session.
-- Gain hands on experience with the  **Explorer > Data Findings** page to find specific information.
-- Gain hands on experience with the  **Explorer > Security Graph** page to find specific information.
+- Gain hands on experience with the **Explorer > Data Findings** page to find specific information.
+- Gain hands on experience with the **Explorer > Security Graph** page to find specific information.
 - Learn to filter views and answer specific questions.
 
 ## Pre-requisites
@@ -16,13 +16,13 @@ The following is required to perform this lab:
 
 Before you begin, verify that you have access to a Wiz tenant with a user account and user role that has permission to query the graph and save queries across all environments. The following roles can save a graph query: 
 
--  Project Graph Reader
--  Project Member
--  Project Admin
--  Global Graph Reader
--  Global Responder
--  Global Contributor
--  Global Admin
+- Project Graph Reader
+- Project Member
+- Project Admin
+- Global Graph Reader
+- Global Responder
+- Global Contributor
+- Global Admin
 
 ## Overall time commitment
 The individual participant should be able to complete this session in approximately 55 minutes. However, reviewing the results with your cohort may take additional time.
@@ -34,10 +34,10 @@ The individual participant should be able to complete this session in approximat
 
 1. What two types of settings need to be configured to enable DSPM in Wiz?
 2. How do the Wiz DSPM features fit within the broader context of data security?
-3. What are the key graph resource objects that contain a senstive data findig?
+3. What are the key graph resource objects that contain a sensitive data finding?
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data leakage?
 5. What are the two considerations in a data finding's severity level?
-6. What lanaguage is used to define a data classifier? BONUS: What language can be used to validate a matched value?
+6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
 
 
 ## Exercise 2. Seek & Find
@@ -52,7 +52,7 @@ The individual participant should be able to complete this session in approximat
 1. How many buckets contain sensitive data?
 2. How many occurrences of sensitive data in publicly accessible buckets can you find?
 3. Build a query that finds all buckets that host sensitive data where that data is not encrypted on the bucket.
-4. Building on the last question,  what can you add to the query to find all buckets that host sensitive data where that data is not encrypted on the bucket and it is validated as accessible from the internet from a web browser?
+4. Building on the last question, what can you add to the query to find all buckets that host sensitive data where that data is not encrypted on the bucket and it is validated as accessible from the internet from a web browser?
 5. How many buckets and database servers contain sensitive data?
 6. Find all resources with secrets. Consider the resources scoped for sensitive data scans (as opposed to Workload scans)
 7. How many resources have secrets where the resources are scoped for sensitive data scans as opposed to Workload scans?
@@ -64,21 +64,21 @@ The individual participant should be able to complete this session in approximat
 ## Exercise 1. Concept Review
 
 1. What two types of settings need to be configured to enable DSPM in Wiz?
-A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for senstive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
+A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for sensitive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
 2. How do the Wiz DSPM features fit within the broader context of data security?
 A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively porrect sensitive and regulated data. It is not a data governance solution.
-3. What are the key graph resource objects that contain a senstive data findig?
+3. What are the key graph resource objects that contain a sensitive data finding?
 A: Answers include: data store, data schema, buckets, databases, database servers, data resources (generic term to collect them all).
-BONUS: Why doesn't a volume have a data finding?  All data findings are attached to the workload, not to the volume. The advantage of this approach is that we can see all of the affected resources that mount a shared volume.
+BONUS: Why doesn't a volume have a data finding? All data findings are attached to the workload, not to the volume. The advantage of this approach is that we can see all of the affected resources that mount a shared volume.
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
-A: Data exfiltration is a risk that has been futher qualified with real-time attack data from either a CSP Scanner Sevice (such as Azure Defender for Cloud, Amazon GuardDuty, or Google Security Command Center).
+A: Data exfiltration is a risk that has been further qualified with real-time attack data from either a CSP Scanner Service (such as Azure Defender for Cloud, Amazon GuardDuty, or Google Security Command Center).
 5. What are the two considerations in a data finding's severity level?
 A: Wiz assigns critical, high, medium, or low severities to Data Findings based on two factors:
 - Data Classifier severity
 - Number of unique matches within the file (e.g., a leaked file with 1000 email addresses poses a greater risk than a file with just three addresses)
 The higher both of these factors are, the higher the severity. If the same data classifier appears in more than one file, Wiz will generate the finding severity according to the maximum number of unique matches.
 For more information, see: https://docs.wiz.io/wiz-docs/docs/data-security#severity
-6. What lanaguage is used to define a data classifier? BONUS: What language can be used to validate a matched value?
+6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
 A: RegEx is used to define a data classifier. However, you can use Rego to validate the matched, such as by performing a checksum test on the result. 
 
 
@@ -88,10 +88,10 @@ A: You can achieve this multiple ways, but the fastest way is Explorer > Data Fi
 https://demo.wiz.io/data-findings#~(groupBy~'location~filters~())
 2. How do you find which data volumes on a VM actually have a data finding? 
 A: 
-3.  Where do you define a custom classifier?
+3. Where do you define a custom classifier?
 A: Policies > Data Classification Rules > Create Data Classification Rule
 4. I wanted to exclude scanning of private buckets in a specific region. Where can specify this?
-A: Settings > Scanners > Data Security. Under Buckets, select Scope = Scan all resources, excluding ones matching tag, subscription, region or project and specifiy the regions to exclude.
+A: Settings > Scanners > Data Security. Under Buckets, select Scope = Scan all resources, excluding ones matching tag, subscription, region or project and specify the regions to exclude.
 5. How do I quickly see issues that identify data is being actively exfiltrated?
 A: Go to Issues and select Risk = Data Leakage.
 
@@ -122,7 +122,7 @@ https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'DATA_FINDING)~select~true~r
 The attribute about encryption at rest is one that applies to the bucket, not to the data. 
 https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~with~(type~(~'DATA_FINDING)~select~true)))~where~(encrypted~(EQUALS~false))))
 
-4. Building on the last question,  what can you add to the query to find all buckets that host sensitive data where that data is not encrypted on the bucket and it is validated as accessible from the internet from a web browser?
+4. Building on the last question, what can you add to the query to find all buckets that host sensitive data where that data is not encrypted on the bucket and it is validated as accessible from the internet from a web browser?
 
 Full query:
 
@@ -130,7 +130,7 @@ https://demo.wiz.io/graph#~(query~(type~(~'BUCKET)~select~true~relationships~(~(
 
 5. How many buckets and database servers contain sensitive data?
 
-A database server is a first class object representing a workload that hosts one or more databases.
+A database server is a first-class object representing a workload that hosts one or more databases.
 
 https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'BUCKET~'DB_SERVER)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~with~(type~(~'DATA_FINDING)~select~true~aggregate~true)))))
 
@@ -142,7 +142,7 @@ https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'DATA_FINDING)~relationships
 
 NOTE from Raph: each acceptable query above generates a different result. Need to narrow down to what we want to see.
 
-As usual, there are multiple queries that result in the correct answer.  The key is that we need to consider the resources that we have scoped for scans for sensitive data. The resources that we scan today for secrets are buckets, databases, and database servers. In the near future, we will also scan  hosted data volumes (as opposed to OS volumes).
+As usual, there are multiple queries that result in the correct answer. The key is that we need to consider the resources that we have scoped for scans for sensitive data. The resources that we scan today for secrets are buckets, databases, and database servers. In the near future, we will also scan hosted data volumes (as opposed to OS volumes).
 
 The fastest way to get this answer is actually off of the Data Security dashboard. 
 
@@ -152,7 +152,7 @@ Tip: We've thrown in the optional application endpoint here to show which ones a
 
 7. How many resources have secrets where the resources are scoped for sensitive data scans as opposed to Workload scans?
 
-Tricky question for sure.  The new object "Data Resource" can be used, but it also scans OS volumes, so how do we get the Data Scan security tool results? Find the results and open one that is a data scan and filter to objects like this. 
+Tricky question for sure. The new object "Data Resource" can be used, but it also scans OS volumes, so how do we get the Data Scan security tool results? Find the results and open one that is a data scan and filter to objects like this. 
 
 https://demo.wiz.io/p/ebclabs/graph#~(queryTitle~'Publicly*20Exposed~query~(type~(~'DATA_RESOURCE)~select~true~relationships~(~(type~(~(type~'SCANNED~reverse~true))~with~(type~(~'SECURITY_TOOL_SCAN)~where~(dataSource_name~(EQUALS~(~'Wiz*20Data*20Scanner)))))~(type~(~(type~'CONTAINS))~with~(type~(~'SECRET_INSTANCE)~relationships~(~(type~(~(type~'INSTANCE_OF))~with~(type~(~'SECRET_DATA)~where~(type~(EQUALS~(~'SecretTypePrivateKey~'SecretTypeDBConnectionString~'SecretTypeGitCredential~'SecretTypePresignedURL~'SecretTypeSaasAPIKey~'SecretTypeCloudKey)))))))))))
 
@@ -164,4 +164,4 @@ True. Wiz does scan for malware on storage buckets. For buckets, this functional
 
 False. Data findings do not include secrets, only the PII, PHI, PCI type information. For secret instances, you must still look for actual instances on the correct resources.
 
-While Data Security includes secrets in the sensitive data concept, queries match against secrets using the secret instance node. To ensure you find the correct results,  change the scope of the objects/resources in question--for secret instances on on the "data resources" as opposed to the workloads. 
+While Data Security includes secrets in the sensitive data concept, queries match against secrets using the secret instance node. To ensure you find the correct results, change the scope of the objects/resources in question--for secret instances on on the "data resources" as opposed to the workloads. 
