@@ -28,7 +28,10 @@ Before you begin, verify that you have access to a Wiz tenant with a user accoun
 The individual participant should be able to complete this session in approximately 55 minutes. However, reviewing the results with your cohort may take additional time.
 
 ## Instructions
-
+Complete each section accordingly:
+* Concept review. Jot down your answer and review with your cohort.
+* Seek & Find. Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
+* Graph Query. 
 
 ## Exercise 1. Concept Review
 
