@@ -3,6 +3,7 @@
 ## Overview
 
 Welcome to the Wiz DSPM lab. In this lab, you will:
+- Review key concepts from the 100 DSPM in Wiz Overview and Demo session.
 - Gain hands on experience with the  **Explorer > Data Findings** page to find specific information.
 - Gain hands on experience with the  **Explorer > Security Graph** page to find specific information.
 - Learn to filter views and answer specific questions.
@@ -26,17 +27,25 @@ Before you begin, verify that you have access to a Wiz tenant with a user accoun
 ## Overall time commitment
 The individual participant should be able to complete this session in approximately 55 minutes. However, reviewing the results with your cohort may take additional time.
 
-## Exercise 0. Concept Review
-
-1. How do the Wiz DSPM features fit within the broader context of data security?
+## Instructions
 
 
-## Exercise 1. Seek & Find
+## Exercise 1. Concept Review
+
+1. What two types of settings need to be configured to enable DSPM in Wiz?
+2. How do the Wiz DSPM features fit within the broader context of data security?
+3. What are the key graph resource objects that contain a senstive data findig?
+4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
+5. What are the two considerations in a data finding's severity level?
 
 
-## Exercise 2. Graph Query
+## Exercise 2. Seek & Find
+1. In the Wiz portal, where can you review
+2. How do you isolate the data volumes on a VM to see them in the Security Graph?
 
-1.  How many buckets contain sensitive data?
+## Exercise 3. Graph Query
+
+1. How many buckets contain sensitive data?
 2. How many occurrences of sensitive data in publicly accessible buckets can you find?
 3. Build a query that finds all buckets that host sensitive data where that data is not encrypted on the bucket.
 4. Building on the last question,  what can you add to the query to find all buckets that host sensitive data where that data is not encrypted on the bucket and it is validated as accessible from the internet from a web browser?
@@ -48,15 +57,26 @@ The individual participant should be able to complete this session in approximat
 10.
 # Exercise Answers
 
-## Exercise 0. Concept Review
+## Exercise 1. Concept Review
 
-1. How do the Wiz DSPM features fit within the broader context of data security?
+1. What two types of settings need to be configured to enable DSPM in Wiz?
+A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for senstive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
+2. How do the Wiz DSPM features fit within the broader context of data security?
 A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively porrect sensitive and regulated data. It is not a data governance solution.
+3. What are the key graph resource objects that contain a senstive data findig?
+A: 
+4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
+A: 
+5. What are the two considerations in a data finding's severity level?
+A: Wiz assigns critical, high, medium, or low severities to Data Findings based on two factors:
+- Data Classifier severity
+- Number of unique matches within the file (e.g., a leaked file with 1000 email addresses poses a greater risk than a file with just three addresses)
+The higher both of these factors are, the higher the severity. If the same data classifier appears in more than one file, Wiz will generate the finding severity according to the maximum number of unique matches.
+For more information, see: https://docs.wiz.io/wiz-docs/docs/data-security#severity
 
+## Exercise 2. Seek & Find
 
-## Exercise 1. Seek & Find
-
-## Exercise 2. Graph Query
+## Exercise 3. Graph Query
 
 1. Using the bucket node, look for data findings. Be sure to aggregate on the findings, since we just care about the bucket count.
 
