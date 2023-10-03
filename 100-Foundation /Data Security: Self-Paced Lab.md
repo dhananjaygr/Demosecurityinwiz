@@ -42,7 +42,6 @@ Complete each section accordingly:
 5. What are the two considerations in a data finding's severity level?
 6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
 
-
 ## Exercise 2. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
 2. How do you find which data volumes on a VM actually have a data finding? 
@@ -84,7 +83,6 @@ For more information, see: https://docs.wiz.io/wiz-docs/docs/data-security#sever
 6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
 A: RegEx is used to define a data classifier. However, you can use Rego to validate the matched, such as by performing a checksum test on the result. 
 
-
 ## Exercise 2. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
 A: You can achieve this multiple ways, but the fastest way is Explorer > Data Findings and filter by Location. 
@@ -101,6 +99,7 @@ A: Go to Issues and select Risk = Data Leakage.
 ## Exercise 3. Graph Query
 
 1. Using the bucket node, look for data findings. Be sure to aggregate on the findings, since we just care about the bucket count.
+   A: Start with the Bucket node, add data finding (as a bucket is a workload), aggregate on the findings. 
 
 https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~with~(type~(~'DATA_FINDING)~select~true~aggregate~true)))))
 
@@ -110,7 +109,7 @@ https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'DATA_FINDING)~relationships
 
 2. How many occurrences of sensitive data in publicly accessible buckets can you find?
 
-To assess internet accessibility for a bucket, use the Application Endpoint node. 
+To assess publically accessible, do one of two things: add the Application Endpoint node to the bucket or filter to Internet Exposure property = True (Currently, there is an issue on buckets where only Wide Internet Exposure is getting set correctly --- so Application endpoint is probably more accruate.)
 
 https://demo.wiz.io/p/ebclabs/graph#~(query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'SERVES))~with~(type~(~'ENDPOINT)~select~true))~(type~(~(type~'HAS_DATA_FINDING))~with~(type~(~'DATA_FINDING)~select~true)))))
 
