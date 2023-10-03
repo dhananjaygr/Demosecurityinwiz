@@ -42,6 +42,9 @@ The individual participant should be able to complete this session in approximat
 ## Exercise 2. Seek & Find
 1. In the Wiz portal, where can you review
 2. How do you isolate the data volumes on a VM to see them in the Security Graph?
+3. TBW
+4. TBW
+5. TBW
 
 ## Exercise 3. Graph Query
 
@@ -54,7 +57,7 @@ The individual participant should be able to complete this session in approximat
 7. How many resources have secrets where the resources are scoped for sensitive data scans as opposed to Workload scans?
 8. When scanning for sensitive data on buckets, Wiz looks for PII, PCI, PHI, and secrets.
 9. A sensitive data finding includes secret instances.
-10.
+
 # Exercise Answers
 
 ## Exercise 1. Concept Review
@@ -66,7 +69,7 @@ A: Wiz helps detect sensitive data and contextualize the risk to that data so y
 3. What are the key graph resource objects that contain a senstive data findig?
 A: 
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
-A: 
+A: Data exfiltration is a risk that has been futher qualified with real-time attack data from either a CSP Scanner Sevice (such as Azure Defender for Cloud, Amazon GuardDuty, or Google Security Command Center).
 5. What are the two considerations in a data finding's severity level?
 A: Wiz assigns critical, high, medium, or low severities to Data Findings based on two factors:
 - Data Classifier severity
