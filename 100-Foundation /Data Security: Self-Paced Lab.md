@@ -67,7 +67,8 @@ A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as t
 2. How do the Wiz DSPM features fit within the broader context of data security?
 A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively porrect sensitive and regulated data. It is not a data governance solution.
 3. What are the key graph resource objects that contain a senstive data findig?
-A: 
+A: Answers include: data store, data schema, buckets, databases, database servers, data resources (generic term to collect them all).
+BONUS: Why doesn't a volume have a data finding?  Becasue all findings other than CCR findings, are attached to the workload itself.`
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
 A: Data exfiltration is a risk that has been futher qualified with real-time attack data from either a CSP Scanner Sevice (such as Azure Defender for Cloud, Amazon GuardDuty, or Google Security Command Center).
 5. What are the two considerations in a data finding's severity level?
