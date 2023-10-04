@@ -33,7 +33,7 @@ Complete each section accordingly:
 - **Seek & Find.** Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
 - **Graph Query.** Review each task and navigate to the answer in demo.wiz.io. Because the cloud is dynamic and new findings are inevitable, answers should not be "specific." Instead, they should be in the form of navigation Condition + Property filter(s) + narrowing condition + property filter(s) + etc. (if helpful).  You may use any accelerators or tips to initiate your queries.
 
-## Exercise 1. Concept Review
+## Exercise 0. Concept Review
 
 1. What two types of settings need to be configured to enable DSPM in Wiz?
 2. How do the Wiz DSPM features fit within the broader context of data security?
