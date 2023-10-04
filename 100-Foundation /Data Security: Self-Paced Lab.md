@@ -41,6 +41,8 @@ Complete each section accordingly:
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data leakage?
 5. What are the two considerations in a data finding's severity level?
 6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
+7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
+
 
 ## Exercise 2. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
@@ -81,7 +83,9 @@ A: Wiz assigns critical, high, medium, or low severities to Data Findings based 
 The higher both of these factors are, the higher the severity. If the same data classifier appears in more than one file, Wiz will generate the finding severity according to the maximum number of unique matches.
 For more information, see: https://docs.wiz.io/wiz-docs/docs/data-security#severity
 6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
-A: RegEx is used to define a data classifier. However, you can use Rego to validate the matched, such as by performing a checksum test on the result. 
+A: RegEx is used to define a data classifier. However, you can use Rego to validate the matched, such as by performing a checksum test on the result.
+7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
+A: On the Settings > Scanners > Workload Scanner page, verify they have the Enable non-OS disk scanning setting enabled. This setting will discover hosted technologies on the non-OS volumes. Otherise, Wiz will not detect the database server technology on a non-boot volume.
 
 ## Exercise 2. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
