@@ -1,10 +1,10 @@
 [
   {
-    "Name": "Deploying Wiz Outpost on Azure",
+    "Name": "DSPM Lab",
     "Language": "English",
     "Files": [
 	    {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/custom-classifier-lab.md?",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/custom-classifier-lab.md",
         "Order": 1
       }
     ]
