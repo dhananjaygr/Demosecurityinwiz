@@ -1,5 +1,7 @@
 # DSPM: Defining Custom Classifiers
 
+(Data Security Docs!https://docs.wiz.io/wiz-docs/docs/data-sec)
+
 *Scenario A:* You work for an organization that tags it's intellectual property with "Company Confidential – Internal Only".
 
 *Scenario B:* You work for a military contractor that is required to tag all content with a "Secret", "Classified", or "Unclassified" sensitivity label. 
