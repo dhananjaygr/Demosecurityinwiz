@@ -5,6 +5,7 @@ In this lab, we will develop custom data classifiers to generate findings in eit
 For a refresher on some of the DSPM features in Wiz, see the following:
 
 - [Data Security Docs](https://docs.wiz.io/wiz-docs/docs/data-sec)
+- [Data Scan Objects on the Graph](https://docs.wiz.io/wiz-docs/docs/data-security#data-scan-objects)
 
 *Scenario A:* You work for an organization that tags it's intellectual property with "Company Confidential – Internal Only".
 
