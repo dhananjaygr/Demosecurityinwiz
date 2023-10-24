@@ -1,4 +1,4 @@
-# DSPM: Define a Custom Classifier
+# DSPM: Defining Custom Classifiers
 
 *Scenario A:* You work for an organization that tags it's intellectual property with "Company Confidential – Internal Only".
 
