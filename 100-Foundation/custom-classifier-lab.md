@@ -1,6 +1,10 @@
 # DSPM: Defining Custom Classifiers
 
-(Data Security Docs!https://docs.wiz.io/wiz-docs/docs/data-sec)
+In this lab, we will develop custom data classifiers to generate findings in either the CSAPROD or WizLabs test environment. Consider the scenarios and exercises and use ChatGPT or another RegEx tool to define matching text. Because we perform data sampling, set the alert threshold to 1 and specify the data classifier severity at high or critical, as you see fit in the scenario.
+
+For a refresher on some of the DSPM features in Wiz, see the following:
+
+- [Data Security Docs](https://docs.wiz.io/wiz-docs/docs/data-sec)
 
 *Scenario A:* You work for an organization that tags it's intellectual property with "Company Confidential – Internal Only".
 
