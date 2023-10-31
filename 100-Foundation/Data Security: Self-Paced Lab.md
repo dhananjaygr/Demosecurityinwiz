@@ -40,7 +40,7 @@ Complete each section accordingly:
 3. What are the key graph resource objects that contain a sensitive data finding?
 4. What is the difference between the two data-related risk factors: Unprotected data vs. Data leakage?
 5. What are the two considerations in a data finding's severity level?
-6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
+6. What language is used to define a data content classifier? BONUS: What language can be used to validate a matched value?
 7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
 
 
