@@ -44,14 +44,14 @@ Complete each section accordingly:
 7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
 
 
-## Exercise 2. Seek & Find
+## Exercise 1. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
 2. How do you find which data volumes on a VM actually have a data finding? 
 3. Where do you define a custom classifier?
 4. I wanted to exclude scanning of private buckets in a specific region. Where can specify this?
 5. How do I quickly see issues that identify data is being actively exfiltrated?
 
-## Exercise 3. Graph Query
+## Exercise 2. Graph Query
 
 1. How many buckets contain sensitive data?
 2. How many occurrences of sensitive data in publicly accessible buckets can you find?
@@ -65,7 +65,7 @@ Complete each section accordingly:
 
 # Exercise Answers
 
-## Exercise 1. Concept Review
+## Exercise 0. Concept Review
 
 1. What two types of settings need to be configured to enable DSPM in Wiz?
 A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for sensitive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
@@ -87,7 +87,7 @@ A: RegEx is used to define a data classifier. However, you can use Rego to valid
 7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
 A: On the Settings > Scanners > Workload Scanner page, verify they have the Enable non-OS disk scanning setting enabled. This setting will discover hosted technologies on the non-OS volumes. Otherise, Wiz will not detect the database server technology on a non-boot volume.
 
-## Exercise 2. Seek & Find
+## Exercise 1. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
 A: You can achieve this multiple ways, but the fastest way is Explorer > Data Findings and filter by Location. 
 https://demo.wiz.io/data-findings#~(groupBy~'location~filters~())
@@ -100,7 +100,7 @@ A: Settings > Scanners > Data Security. Under Buckets, select Scope = Scan all r
 5. How do I quickly see issues that identify data is being actively exfiltrated?
 A: Go to Issues and select Risk = Data Leakage.
 
-## Exercise 3. Graph Query
+## Exercise 2. Graph Query
 
 1. Using the bucket node, look for data findings. Be sure to aggregate on the findings, since we just care about the bucket count.
    A: Start with the Bucket node, add data finding (as a bucket is a workload), aggregate on the findings. 
