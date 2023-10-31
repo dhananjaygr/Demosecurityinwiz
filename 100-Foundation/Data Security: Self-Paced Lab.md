@@ -29,19 +29,8 @@ The individual participant should be able to complete this session in approximat
 
 ## Instructions
 Complete each section accordingly:
-- **Concept review.** Jot down your answer and review with your cohort.
 - **Seek & Find.** Write down where in the Wiz portal you can find the answer. You can specify to the nearly page and section.  Review with your cohort.
 - **Graph Query.** Review each task and navigate to the answer in demo.wiz.io. Because the cloud is dynamic and new findings are inevitable, answers should not be "specific." Instead, they should be in the form of navigation Condition + Property filter(s) + narrowing condition + property filter(s) + etc. (if helpful).  You may use any accelerators or tips to initiate your queries.
-
-## Exercise 0. Concept Review
-
-1. What two types of settings need to be configured to enable DSPM in Wiz?
-2. How do the Wiz DSPM features fit within the broader context of data security?
-3. What are the key graph resource objects that contain a sensitive data finding?
-4. What is the difference between the two data-related risk factors: Unprotected data vs. Data leakage?
-5. What are the two considerations in a data finding's severity level?
-6. What language is used to define a data content classifier? BONUS: What language can be used to validate a matched value?
-7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
 
 
 ## Exercise 1. Seek & Find
@@ -65,31 +54,9 @@ Complete each section accordingly:
 
 # Exercise Answers
 
-## Exercise 0. Concept Review
-
-1. What two types of settings need to be configured to enable DSPM in Wiz?
-A: 1. Turn on the desired DSPM scanner settings to instruct the Wiz backend as to which types of resources to scan for sensitive data. 2. Ensure that you enable DSPM permissions settings for the connector. This setting enables permissions in the customer tenant that allow Wiz to perform the data scans.
-2. How do the Wiz DSPM features fit within the broader context of data security?
-A: Wiz helps detect sensitive data and contextualize the risk to that data so you can proactively protect sensitive and regulated data. It is not a data governance/data retention solution.
-3. What are the key graph resource objects that contain a sensitive data finding?
-A: Answers include: data store, data schema, buckets, databases, database servers, data resources (generic term to collect them all).
-BONUS: Why doesn't a volume have a data finding? All data findings are attached to the workload, not to the volume. The advantage of this approach is that we can see all of the affected resources that mount a shared volume.
-4. What is the difference between the two data-related risk factors: Unprotected data vs. Data exfiltration?
-A: Data exfiltration is a risk that has been further qualified with real-time attack data from either a CSP Scanner Service (such as Azure Defender for Cloud, Amazon GuardDuty, or Google Security Command Center).
-5. What are the two considerations in a data finding's severity level?
-A: Wiz assigns critical, high, medium, or low severities to Data Findings based on two factors:
-- Data Classifier severity
-- Number of unique matches within the file (e.g., a leaked file with 1000 email addresses poses a greater risk than a file with just three addresses)
-The higher both of these factors are, the higher the severity. If the same data classifier appears in more than one file, Wiz will generate the finding severity according to the maximum number of unique matches.
-For more information, see: https://docs.wiz.io/wiz-docs/docs/data-security#severity
-6. What language is used to define a data classifier? BONUS: What language can be used to validate a matched value?
-A: RegEx is used to define a data classifier. However, you can use Rego to validate the matched, such as by performing a checksum test on the result.
-7. I have a customer who knows they have a non-boot volume with Oracle Database server running on it. However, it does not show up as detected in the graph. What's wrong?
-A: On the Settings > Scanners > Workload Scanner page, verify they have the Enable non-OS disk scanning setting enabled. This setting will discover hosted technologies on the non-OS volumes. Otherise, Wiz will not detect the database server technology on a non-boot volume.
-
 ## Exercise 1. Seek & Find
 1. In the Wiz portal, where can you review data findings by country?
-A: You can achieve this multiple ways, but the fastest way is Explorer > Data Findings and filter by Location. 
+A: You can get there a few ways. On the Data Security dashbaord there is a locations widget. You can also go to **Explorer > Data Findings** and filter by **Location**. 
 https://demo.wiz.io/data-findings#~(groupBy~'location~filters~())
 2. How do you find which data volumes on a VM actually have a data finding? 
 A: Looking at the workload, you can see the data findings and the path where the finding lives. However, you cannot directly determine which volume is affected; it requires working knowledge of the environment. For example, if the path is /share/users/*, then it is likely an NFS share and a noo-boot volume. 
