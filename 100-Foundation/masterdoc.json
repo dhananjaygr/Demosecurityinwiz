@@ -12,11 +12,11 @@
         "Order": 2
       },
 	     {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-data-class.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-data-classifier.md",
         "Order": 3
       },
 	 {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-control.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-create-control.md",
         "Order": 4
       }
     ]
