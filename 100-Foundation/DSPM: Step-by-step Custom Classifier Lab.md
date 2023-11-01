@@ -3,7 +3,7 @@
 
 We’re going to work through several custom classifiers so that you get a good feel for what we can detect and how to configure the rules. We will have several scenarios where we need to define either a data match rule or a metadata match rule. We will also see how to leverage findings from these rules to create controls that solve for more complex problems. So let’s get started!
 
-In this lab, we will develop custom data classifiers to generate findings in either the WizLabs environment. 
+In this lab, we will develop custom data classifiers to generate findings in the WizLabs environment. 
 
 ## Instructions
 
