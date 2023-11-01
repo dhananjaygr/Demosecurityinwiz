@@ -4,8 +4,20 @@
     "Language": "English",
     "Files": [
 	    {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-lab.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-intro.md",
         "Order": 1
+      },
+	     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-meta-class.md",
+        "Order": 2
+      },
+	     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-data-class.md",
+        "Order": 3
+      },
+	 {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-control.md",
+        "Order": 4
       }
     ]
   }
