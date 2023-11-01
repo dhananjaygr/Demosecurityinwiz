@@ -6,6 +6,14 @@
 	    {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/custom-classifier-lab.md",
         "Order": 1
+      },
+	{
+	"RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/custom-classifier-lab.md",
+	"Order": 2
+	},
+	{
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/custom-classifier-lab.md",
+        "Order": 3
       }
     ]
   }
