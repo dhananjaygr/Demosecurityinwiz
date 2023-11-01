@@ -4,7 +4,10 @@
 We’re going to work through several custom classifiers so that you get a good feel for what we can detect and how to configure the rules. We will have several scenarios where we need to define either a data match rule or a metadata match rule. We will also see how to leverage findings from these rules to create controls that solve for more complex problems. So let’s get started!
 
 
-In this lab, we will develop custom data classifiers to generate findings in either the CSAPROD or WizLabs test environment. Consider the scenarios and exercises and use ChatGPT or another RegEx tool to define matching text. Because we perform data sampling, set the alert threshold to 1 and specify the data classifier severity at high or critical, as you see fit in the scenario.
+In this lab, we will develop custom data classifiers to generate findings in either the WizLabs environment. 
+
+
+Consider the scenarios and exercises and use a tool like [RegEx 101](https://regex101.com/) (be sure to select the Golang flavor to match with our implementation) to define matching text. Because we perform data sampling, set the alert threshold to 1 and specify the data classifier severity at high or critical, as you see fit in the scenario.
 
 For a refresher on some of the DSPM features in Wiz, see the following:
 
