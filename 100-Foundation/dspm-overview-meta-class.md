@@ -43,4 +43,4 @@ As we are focused on proprietariy information, this rule does not match any know
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
-6. At the top of the drawer, click the **&#x22EE;** in the upper right to open the More options menu and click **Rescan resource**.
+6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
