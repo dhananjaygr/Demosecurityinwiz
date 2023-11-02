@@ -14,7 +14,7 @@ In this exercise, we will a custom data classifier to scan a file for each of th
 
 ### Expected Outcomes
 
-Once the rule is defined and the bucket is rescanned, we will see some findings for the metadata classifier. 
+Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifier. 
 
 ### Task 1. Create the data classifier rule
 
