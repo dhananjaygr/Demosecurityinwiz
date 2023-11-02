@@ -44,20 +44,20 @@ The following guidance should be used when defining these classifiers:
 2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 <br/><ins>Expeted Result:</ins> The New Data Classification Rule page appears. 
 3. Under Classification Type, select **Data match**.
-4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-classification-\<level\>* (for example, odl_user_#####-dspmlab-data-classification-confidential).
+4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-\<classification-level\>* (for example, odl_user_#####-dspmlab-data-classification-confidential).
 5. (Optional) In the Description box, enter a description for the rule.
 <br/>Use the guidance from above.
 6. From the Data Type dropdown , select **Other**. <br/>
 As we are focused on proprietariy information, this rule does not match any known defintions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
 <br/>Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
-![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
+![Data Classifier Rule Properties](img/data-match-descrip-1.png)
 8. From the Severity dropdown box, select based on guidance above.
 <br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences.
 9. Under Matcher Logic in the Find text matching this Regex box, enter the recommended code as descrived above. 
 10. In the Minimum unique matches box, enter **1**.
 11. From the Masking list, select **Partial Mask**.
-![Metadata Match Properties](img/meta-data-match-criteria.png)
+![Data Match Properties](img/data-match-matcher.png)
 12. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
