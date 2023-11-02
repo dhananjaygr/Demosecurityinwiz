@@ -8,6 +8,8 @@ In this exercise, we will a custom data classifier to scan a file for each of th
 * For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
 * For all three rules, select the sensitive level of 1 finding for this lab. Because Wiz samples data, we want to ensure that our rules fire when a match is found. 
 
+The tasks to perform are as follows:
+
 * First, we will define the three data match rules. 
 * Second, once the rules are completed, we will rescan a bucket resource to see if our rules fire on any of its contents.
 * Last, we will verify our rules by reviewing the finding results. 
