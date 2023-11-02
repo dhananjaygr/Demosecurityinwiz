@@ -28,9 +28,14 @@ As we are focused on proprietariy information, this rule does not match any know
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
 8. From the Severity dropdown box, select **Critical**.
 <br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences.
-9. Under Matcher Logic in the Find text matching this Regex box, enter **\bdraft-patent-filing\b**, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
-<br/>In this regular expression, \b is a word boundary anchor that ensures "draft-patent-filing" is a whole word and not part of another word. So, it will match the exact string "draft-patent-filing" in a filename.
-<br/>**Tip:** You can enter a few file name examples in the Text Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. You just need to be fairly non-specific in the flavor you want. For example, 'Write a regular expression to check for "draft-patent-filing" a filename' will generate the expression used above. 
+9. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
+<br/>In this regular expression, the following is true:
+* <code>.*</code> matches any character (except for a newline) zero or more times, 
+* <code>draft-patent-filing</code> is the literal string you want to match, 
+* <code>.*</code> again matches any character zero or more times.
+This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
+
+<br/>**Tip:** You can enter a few file name examples in the Text Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. You just need to be fairly non-specific in the flavor you want. For example, 'WI need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' will generate the expression used above. 
 10. In the Minimum file size box, enter **12** and select **KB** in the Bytes drop down. 
 <br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
