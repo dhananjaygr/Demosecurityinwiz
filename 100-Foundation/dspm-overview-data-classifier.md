@@ -18,7 +18,7 @@ The following guidance should be used when defining these classifiers:
 #### Secret Classification Rule
 * For a rule name use *\<login-username\>-dspmlab-data-secret.
 * Set the Description to "Generate a finding for any files that are marked with a classification level of secret."
-* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bSecret\b</pre>.
+* Under Matcher logic for the Find text matching this Regex box, enter <code>\bSecret\b</code>.
 * For the rule that scans for the "Secret" classification level, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
@@ -26,7 +26,7 @@ The following guidance should be used when defining these classifiers:
 #### Confidential Classification Rule
 * For a rule name use *\<login-username\>-dspmlab-data-confidential.
 * Set the Description to "Generate a finding for any files that are marked with a classification level of confidential."
-* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bConfidential\b</pre>.
+* Under Matcher logic for the Find text matching this Regex box, enter <code>\bConfidential\b</code>.
 * For the rule that scans for the "Confidential" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
@@ -34,7 +34,7 @@ The following guidance should be used when defining these classifiers:
 #### Unclassified Classification Rule
 * For a rule name use *\<login-username\>-dspmlab-data-unclassified.
 * Set the Description to "Generate a finding for any files that are marked with a classification level of unclassified."
-* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bUnclassified\b</pre>.
+* Under Matcher logic for the Find text matching this Regex box, enter <code>\bUnclassified\b</code>.
 * For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
