@@ -1,5 +1,5 @@
 ## Exercise: Create a custom data classifier
 
-Generate one or more custom classifiers that generates a data finding when a file contains a required sensitivity level.
+Create a single custom classifiers that generates a data finding when a file contains any required sensitivity level.
 
 
