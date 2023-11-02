@@ -36,7 +36,7 @@ As we are focused on proprietariy information, this rule does not match any know
 This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
 
 <br/>**Tip:** You can enter a few file name examples in the Text Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. You just need to be fairly non-specific in the flavor you want. For example, 'WI need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' will generate the expression used above. 
-10. In the Minimum file size box, enter **12** and select **KB** in the Bytes drop down. 
+10. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
 <br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
 11. Click **Create rule** to save the rule in the Wiz tenant.
@@ -49,3 +49,6 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
+
+### Task 3. Verify the results of the data scan
+
