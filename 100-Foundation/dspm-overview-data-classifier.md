@@ -2,14 +2,8 @@
 
 ### Scope
 
-In this exercise, we will a custom data classifier to scan a file for each of the sensitivity levels. These rules should generate data finding if such a file is detected. The following guidance should be used when defining these classifiers:
-* For the rule that scans for the "Secret" classification level, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content.
-* For the rule that scans for the "Confidential" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
-* For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
-* For all three rules, select the sensitive level of 1 finding for this lab. Because Wiz samples data, we want to ensure that our rules fire when a match is found. 
-
+In this exercise, we will a custom data classifier to scan a file for each of the sensitivity levels. These rules should generate data finding if such a file is detected. 
 The tasks to perform are as follows:
-
 * First, we will define the three data match rules. 
 * Second, once the rules are completed, we will rescan a bucket resource to see if our rules fire on any of its contents.
 * Last, we will verify our rules by reviewing the finding results. 
@@ -18,34 +12,53 @@ The tasks to perform are as follows:
 
 Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifier. 
 
-### Task 1. Create the data classifier rule
+### Scenario Guidance
+The following guidance should be used when defining these classifiers:
 
+#### Secret Classification Rule
+* For a rule name use *\<login-username\>-dspmlab-data-secret.
+* Set the Description to "Generate a finding for any files that are marked with a classification level of secret."
+* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bSecret\b</pre>.
+* For the rule that scans for the "Secret" classification level, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content.
+* Set the Minimum unique matches to 1.
+* From the Masking list, select Partial Mask.
+
+#### Confidential Classification Rule
+* For a rule name use *\<login-username\>-dspmlab-data-confidential.
+* Set the Description to "Generate a finding for any files that are marked with a classification level of confidential."
+* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bConfidential\b</pre>.
+* For the rule that scans for the "Confidential" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
+* Set the Minimum unique matches to 1.
+* From the Masking list, select Partial Mask.
+
+#### Unclassified Classification Rule
+* For a rule name use *\<login-username\>-dspmlab-data-unclassified.
+* Set the Description to "Generate a finding for any files that are marked with a classification level of unclassified."
+* Under Matcher logic for the Find text matching this Regex box, enter <pre>\bUnclassified\b</pre>.
+* For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
+* Set the Minimum unique matches to 1.
+* From the Masking list, select Partial Mask.
+
+### Task 1. For each rule, follow these steps to create the data classifier rule
 1. In the Wiz portal, scope resources down to the WizLabs project by seleting **WizLabs** from the Projects list.
 2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 <br/><ins>Expeted Result:</ins> The New Data Classification Rule page appears. 
 3. Under Classification Type, select **Data match**.
-4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data* (for example, odl_user_#####-dspmlab-data).
+4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-classification-\<level\>* (for example, odl_user_#####-dspmlab-data-classification-confidential).
 5. (Optional) In the Description box, enter a description for the rule.
-<br/>This field is useful for providing context for other users. While not necessary for this lab, it is best practice to state the purpose of the rule and use cases that it is expected to address. For example, "Identify working patent documents that are not submitted or granted. The expectation is to prevent any accidental public exposure of this material prior to patent submission when we can lock in the timestamp for submission. Expected to scan Word, PDF, and text file titles with the required title string 'draft-patent-filing' anywhere in the title of the file."
+<br/>Use the guidance from above.
 6. From the Data Type dropdown , select **Other**. <br/>
 As we are focused on proprietariy information, this rule does not match any known defintions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
-<br/> Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
+<br/>Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
-8. From the Severity dropdown box, select **Critical**.
+8. From the Severity dropdown box, select based on guidance above.
 <br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences.
-9. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
-<br/>In this regular expression, the following is true:
-* <code>.*</code> matches any character (except for a newline) zero or more times, 
-* <code>draft-patent-filing</code> is the literal string you want to match, 
-* <code>.*</code> again matches any character zero or more times.
-This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
-
-<br/>**Tip:** You can enter a few file name examples in the Text Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. You just need to be fairly non-specific in the flavor you want. For example, 'WI need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' will generate the expression used above. 
-10. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
-<br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
+9. Under Matcher Logic in the Find text matching this Regex box, enter the recommended code as descrived above. 
+10. In the Minimum unique matches box, enter **1**.
+11. From the Masking list, select **Partial Mask**.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
-11. Click **Create rule** to save the rule in the Wiz tenant.
+12. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
 ### Task 2. Scan the bucket to test your finding
