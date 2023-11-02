@@ -6,7 +6,7 @@ In this lab, we will develop custom data classifiers to generate findings in the
 
 ## Instructions
 
-Consider the scenarios and exercises and either use the correct metadata or RegEx to define a matching rule. For RegEx, be sure to use a tool like [RegEx 101](https://regex101.com/) (select the Golang flavor) to define valid syntax. Because we perform data sampling, set the alert threshold to 1 and specify the data classifier severity at high or critical, as you see fit in the scenario.
+Consider the scenarios and exercises and either use the correct regular expression (RegEx) to define a matching rule. For RegEx, be sure to use a tool like [RegEx 101](https://regex101.com/) (select the Golang flavor) to define valid syntax. Because we perform data sampling, set the alert threshold to 1 and specify the data classifier severity at high or critical, as you see fit in the scenario.
 
 For a refresher on some of the DSPM features in Wiz, see the following:
 - [Data Security Docs](https://docs.wiz.io/wiz-docs/docs/data-sec)
