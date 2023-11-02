@@ -2,15 +2,16 @@
 
 ### Scope
 
-In this exercise, we will create a custom metadata classifier that finds any files with "draft-patent-filing" in the title. The rule should generate data finding if such a file is detected. We will define the classifier severity level as "Critical" to reflect the sensitve nature of the content. 
+In this exercise, we will create a custom metadata classifier that finds any files with "draft-patent-filing" in the title. The rule should generate data finding if such a file is detected. 
 
-Once this rule is completed, we will rescan a bucket resource to see if our rule fires on any of its contents.
+* First, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content. 
+* Second, once this rule is completed, we will rescan a bucket resource to see if our rule fires on any of its contents.
 
 ### Expected Outcomes
 
 Once the rule is defined and the bucket is rescanned, we will see some findings for the metadata classifier. 
 
-### Create the metadata classifier rule
+### Task 1. Create the metadata classifier rule
 
 1. In the Wiz portal, scope resources down to the WizLabs project by seleting **WizLabs** from the Projects list.
 2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
@@ -34,7 +35,7 @@ As we are focused on proprietariy information, this rule does not match any know
 11. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
-### Scan the bucket to test your finding
+### Task 2. Scan the bucket to test your finding
 1. Navigate to Explorer > Security Graph.
 2. 
 
