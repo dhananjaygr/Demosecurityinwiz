@@ -6,6 +6,7 @@ In this exercise, we will create a custom metadata classifier that finds any fil
 
 * First, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content. 
 * Second, once this rule is completed, we will rescan a bucket resource to see if our rule fires on any of its contents.
+* Last, we will verify our rule by reviewing the finding results. 
 
 ### Expected Outcomes
 
