@@ -4,7 +4,7 @@
 
 In this exercise, we will a custom data classifier to scan a file for each of the sensitivity levels. These rules should generate data finding if such a file is detected. The following guidance should be used when defining these classifiers:
 * For the rule that scans for the "Secret" classification level, we will define the classifier severity level as "Critical" to reflect the sensitve nature of the content.
-* For the rule that scans for the "Classified" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
+* For the rule that scans for the "Confidential" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
 * For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
 * For all three rules, select the sensitive level of 1 finding for this lab. Because Wiz samples data, we want to ensure that our rules fire when a match is found. 
 
