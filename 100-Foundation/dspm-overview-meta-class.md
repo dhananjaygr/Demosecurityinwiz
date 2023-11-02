@@ -43,12 +43,24 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 <br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
 ### Task 2. Scan the bucket to test your finding
-1. Navigate to Explorer > Security Graph.
-2. Click on FIND Cloud Resouce.... and select **Bucket**.
+1. In the Wiz portal, navigate to **Explorer > Security Graph**.
+<br/><ins>Expeted Result:</ins> The Security Graph page appears. 
+2. Click on **FIND Cloud Resouce...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
+<br/><ins>Expeted Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will recieve an error message.
 
 ### Task 3. Verify the results of the data scan
-
+1. In the Wiz portal, navigate to **Explorer > Security Graph**.
+<br/><ins>Expeted Result:</ins> The Security Graph page appears. 
+2. Click on **FIND Cloud Resouce...** and select **Bucket**.
+3. Click the **+** to the right of that new node and select the **Name** property.
+4. In the contains box, enter <code>s3-fileshare-rbm</code>.
+5. Click on the resulting node to open the Details drawer.
+6. On the Overview tab, scroll down to the Disk Scans section. Verify that the Data Scan has completed since you triggered the rescan. 
+<br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
+<br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
+7. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
+<br/><ins>Expeted Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will recieve an error message.
