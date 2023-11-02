@@ -12,17 +12,25 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 
 ### Steps
 
-1. In the Wiz portal, click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
+1. In the Wiz portal, scope resources down to the WizLabs project by seleting **WizLabs** from the Projects list.
+2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 <br/><ins>Expeted Result:</ins> The New Data Classification Rule page appears. 
-2. Under Classification Type, select **Metadata match**.
-3. In the Name box, enter a name for this rule using the following format *<login-username>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
-4. (Optional) In the Description box, enter a description for the rule.
+3. Under Classification Type, select **Metadata match**.
+4. In the Name box, enter a name for this rule using the following format *<login-username>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
+5. (Optional) In the Description box, enter a description for the rule.
 <br/>This field is useful for providing context for other users. While not necessary for this lab, it is best practice to state the purpose of the rule and use cases that it is expected to address. For example, "Identify working patent documents that are not submitted or granted. The expectation is to prevent any accidental public exposure of this material prior to patent submission when we can lock in the timestamp for submission. Expected to scan Word, PDF, and text file titles with the required title string 'draft-patent-filing' anywhere in the title of the file."
-5. From the Data Type dropdown , select **Other**. <br/>
+6. From the Data Type dropdown , select **Other**. <br/>
 As we are focused on proprietariy information, this rule does not match any known defintions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
-6. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
+7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
 <br/> Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
---INSERT IMAGE HERE--
-7. From the Severity dropdown box, select **Critical**.
-<br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences. 
+![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
+8. From the Severity dropdown box, select **Critical**.
+<br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences.
+9. Under Matcher Logic in the Find text matching this Regex box, enter **\bdraft-patent-filing\b**, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
+10. In the Minimum file size box, enter **12288** bytes. 
+<br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k or 12 * 1024 = 12,288 bytes. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
+![Metadata Match Properties](img/meta-data-match-criteria.png)
+11. Click **Create rule** to save the rule in the Wiz tenant.
+<br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
+
 
