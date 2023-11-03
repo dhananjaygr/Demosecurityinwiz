@@ -7,10 +7,10 @@ Your manager wants you to ensure all files that stored with one of the required 
 In this exercise, we will a custom data classifier that scans files for any of the sensitivity levels. This rule should generate a data finding for any file that has one of the sensitivity levels. We are using a single rule to match on any of those conditions (and a new one -- 'Confidential - Internally Use Only'). It is a lesson in "first match" evaluation within the data classification rule, as well as how to build more complicated evaluations using a control. 
 
 The tasks to perform are as follows:
-* First, we will define a data match rule that evaluates all three criteria.
-* Second, once the rule is completed, we will rescan a bucket resource to see if our rules fire on any of its contents.
-* Third, we will define a control that looks for buckets that data on them but none of it matches the data match rule we defined.  
-* Last, we will review our results to see whether the control finds any data stores that include data but that data i not tagged with the data finding we created.
+* First, we define a data match rule that evaluates all three criteria.
+* Second, we rescan a bucket resource to generate any findings for our rules.
+* Third, we define a control that looks for buckets that data on them but none of it matches the data match rule we defined.  
+* Last, we review our results to assess whether the control finds data stores that include data but where the data is not tagged with the data finding from our neew rule.
 
 ### Expected Outcomes
 
