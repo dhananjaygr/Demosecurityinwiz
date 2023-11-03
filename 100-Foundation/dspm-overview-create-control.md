@@ -28,14 +28,13 @@ Once the rules are defined and the bucket is rescanned, we will see some resourc
 As we are focused on proprietariy information, this rule does not match any known defintions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
 <br/>Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
-![Data Classifier Rule Properties](img/data-match-descrip-1.png)
+![Data Classifier Rule Properties](img/dspm-classifier-any-settings)
 8. From the Severity dropdown box, select **Medium**. We are picking a middle ground here an leveraing the more exact matches on Secret and Classified to indicate greater concern. 
 <br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 9. Under Matcher Logic in the Find text matching this Regex box, enter <code>\b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b</code>.
 <br/>This classifier uses '|' to OR the matches; and we've ordered this rule to spefically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' where first, it would match on all of the conditions. While this appears to have no effect in the finding results, that is not true. The masked sample will be based on the initial hit. 
 10. In the Minimum unique matches box, enter **1**.
 11. From the Masking list, select **Partial Mask**.
-![Data Match Properties](img/data-match-matcher.png)
 12. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expected Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
