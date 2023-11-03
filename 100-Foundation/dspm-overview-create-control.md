@@ -77,7 +77,7 @@ As we are focused on proprietary information, this rule does not match any known
 ### Task 4. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Policies > Controls**.
 <br/><ins>Expected Result:</ins> The Controls page appears. 
-2. Click on **All controls outside framework...** and scroll down until you find the control you just defined.
+2. Click on **All controls outside framework** and scroll down until you find the control you just defined.
 3. Click on the  ***\<login-username\>-Missing Required Sensitivity Classification** control to open the control drawer page. 
 ![Custom Control](img/dspm-control-final.png)
 4. To see which resources match the control, click the **View on graph** button.
