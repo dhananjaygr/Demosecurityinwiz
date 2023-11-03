@@ -60,23 +60,22 @@ As we are focused on proprietariy information, this rule does not match any know
 6. To narrow down to buckets that have unstructured data without the finding, let's add the following. Next to the Bucket node, click the **+** aggain, and select **Data Store that stored on it**.
 7. Click **+** to the right of the Data Store object and select the Structured equals flag.
 8. We just said that we don't want structured data, so lets set the value of that Structured equals flag to **False**.
-<br/>Let's consider this query now. We are finding buckets that have occurences of unstructured data, but they do not hjave any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files probably care about, but none of those files have been tagged using the data classification system our manager wants us to check for. So this is a good start. Now let's save this as a control so that we can get an issue generated everytime this rule files, so we can see them at a resource level.  
-9. To create the control, click **Save as control** to the right of the query.
-<br/><ins>Expected Result:</ins> The New Control page appears.
-
-
-10. From the Severity dropdown box, select **High**. While the data sesntivity level is medium, this is a resoruce wide issue. 
-
-4. In the Name box, enter a name for this rule using the following format *\<login-username\>-odl_user_12345-Missing Required Sensitivity Classification
-\* (for example, odl_user_12345-Missing Required Sensitivity Classification
-).
-5. (Optional) In the Description box, enter a description for the rule.
-<br/>Use the guidance from above.
-
+<br/>Let's consider this query now. We are finding buckets that have occurences of unstructured data, but they do not hjave any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files probably care about, but none of those files have been tagged using the data classification system our manager wants us to check for. So this is a good start. Now let's save this as a control so that we can get an issue generated everytime this rule files, so we can see them at a resource level.
 ![Data Classifier Control](img/dspm-control-no-classifier-hits.png)
+10. To create the control, click **Save as control** to the right of the query.
+<br/><ins>Expected Result:</ins> The New Control page appears.
+11. From the Issue Severity dropdown box, select **High**. While the data sesntivity level is medium, this is a resoruce wide issue. 
+12. In the Name box, enter a name for this rule using the following format *\<login-username\>-odl_user_12345-Missing Required Sensitivity Classification
+\* (for example, odl_user_12345-Missing Required Sensitivity Classification
+13. (Optional) In the Description box, enter a description for the rule.
+<br/>We want to ensure that we are clearly stating the intention behind the rule. Enter the following description: "This control looks for any buckets that contain unstructured data, such as Word files, PDFs, and text files, that are not tagged with one of the required sensitive classification levels. The intention is to find the resources so we can remediate them before they become a problem. It also satisfies our compliance requirement to periodically review resources for proper tagging."
+14. In the Recommendations box, enter a description of how to remeidate any resources that have this issue. 
+<br/>It is best practice to provide guidance on how to resolve any resulting issues. For example, in our scenario, we can use "To resolve this issue, review all unstructured files on this bucket and ensure that they have the correct sensitivity classification tag setting. All files should be tagged as 'Secret', 'Confidential', or 'Unclassified'."
+15. To save the control, click **Create Control**.
+<br/><ins>Expected Result:</ins> The New Controls page closes and you return to the graph. You can navigate to the Policies > Controls page, and click the **All controlls outide framewoirk** to find the new control.
+![Custom Control](img/dspm-control-final.png)
 
 
-https://app.wiz.io/graph#~(view~'table~query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~negate~true~with~(type~(~'DATA_FINDING)~where~(dataClassifierId~(EQUALS~(~'CUSTOM-5e7ceb62-c881-4f58-af8b-5c07e9edac2f)))))~(type~(~(type~'HAS_DATA_STORE))~with~(type~(~'DATA_STORE)~select~true~where~(isStructured~(EQUALS~false)))))))
 
 ### Task 4. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
