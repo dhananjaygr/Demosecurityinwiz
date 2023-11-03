@@ -2,11 +2,11 @@
 
 ### Scope
 
-In this exercise, we will three custom data classifiers to scan files for each of the sensitivity levels. These rules should generate data finding if such a file is detected. 
+In this exercise, we three custom data classifiers to scan files for each of the sensitivity levels. These rules should generate data finding if such a file is detected. 
 The tasks to perform are as follows:
-* First, we will define the three data match rules. 
-* Second, once the rules are completed, we will rescan a bucket resource to see if our rules fire on any of its contents.
-* Last, we will verify our rules by reviewing the finding results. 
+* First, we define the three data match rules. 
+* Second, we rescan a bucket resource to see if our rules fire on any of its contents.
+* Last, we verify our rules by reviewing the finding results. 
 
 ### Expected Outcomes
 
