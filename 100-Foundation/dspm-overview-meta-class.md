@@ -34,9 +34,9 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 * <code>draft-patent-filing</code> is the literal string you want to match, 
 * <code>.*</code> again matches any character zero or more times.
 This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
-<br/>**Tip:** You can enter a few file name examples in the Test Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. You just need to be fairly non-specific in the flavor you want. For example, 'WI need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' will generate the expression used above. 
+<br/>**Tip:** You can enter a few file name examples in the Test Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. Less specific is better. For example, the query 'I need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' generates the expression used above. 
 10. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
-<br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
+<br/>**Tip:** Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
 11. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expected Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
@@ -46,7 +46,8 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resource...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
-4. In the contains box, enter <code>s3-fileshare-rbm</code>.
+4. In the equals box, enter <code>s3-fileshare-rbm</code>.
+<br/>Use equals for the fastest results. In exact string matches require additional processing. 
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
 <br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive an error message.
