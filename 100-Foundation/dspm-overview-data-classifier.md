@@ -35,7 +35,7 @@ The following guidance should be used when defining these classifiers:
 * For a rule name use *\<login-username\>-dspmlab-data-unclassified.
 * Set the Description to "Generate a finding for any files that are marked with a classification level of unclassified."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bUnclassified\b</code>.
-* For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Low" to reflect the nature of the content.
+* For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Info" to reflect the nature of the content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
 
