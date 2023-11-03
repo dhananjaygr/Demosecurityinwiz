@@ -73,6 +73,7 @@ As we are focused on proprietariy information, this rule does not match any know
 5. (Optional) In the Description box, enter a description for the rule.
 <br/>Use the guidance from above.
 
+![Data Classifier Control](img/dspm-control-no-classifier-hits.png)
 
 
 https://app.wiz.io/graph#~(view~'table~query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~negate~true~with~(type~(~'DATA_FINDING)~where~(dataClassifierId~(EQUALS~(~'CUSTOM-5e7ceb62-c881-4f58-af8b-5c07e9edac2f)))))~(type~(~(type~'HAS_DATA_STORE))~with~(type~(~'DATA_STORE)~select~true~where~(isStructured~(EQUALS~false)))))))
