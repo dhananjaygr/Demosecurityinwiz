@@ -82,5 +82,10 @@ As we are focused on proprietariy information, this rule does not match any know
 <br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
 <br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
 7. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
-<br/><ins>Expeted Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files named *project-wowie-zowie-draft-patent-filing-financial-analysis.xlsx*
-and *project-wowie-zowie-draft-patent-filing-v1.docx*.
+<br/><ins>Expeted Result:</ins> You find a match for the following files in the data findings. If you expand that finding:
+
+* **Unclassified**. *rfp_request.docx* and *response_plan.docx*
+* **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*,
+*bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
+* **Secret**. *supplies.docx*.
+
