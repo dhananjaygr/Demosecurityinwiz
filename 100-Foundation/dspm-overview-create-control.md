@@ -21,7 +21,7 @@ Once the rules are defined and the bucket is rescanned, we will see some resourc
 2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 <br/><ins>Expected Result:</ins> The New Data Classification Rule page appears. 
 3. Under Classification Type, select **Data match**.
-4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-class-any\* (for example, odl_user_#####-dspmlab-data-class-any).
+4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-class-any* (for example, odl_user_#####-dspmlab-data-class-any).
 5. (Optional) In the Description box, enter a description for the rule.
 <br/>Use the guidance from above.
 6. From the Data Type dropdown, select **Other**. <br/>
