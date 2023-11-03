@@ -65,30 +65,25 @@ As we are focused on proprietariy information, this rule does not match any know
 10. To create the control, click **Save as control** to the right of the query.
 <br/><ins>Expected Result:</ins> The New Control page appears.
 11. From the Issue Severity dropdown box, select **High**. While the data sesntivity level is medium, this is a resoruce wide issue. 
-12. In the Name box, enter a name for this rule using the following format *\<login-username\>-odl_user_12345-Missing Required Sensitivity Classification
+12. In the Name box, enter a name for this rule using the following format *\<login-username\>-Missing Required Sensitivity Classification
 \* (for example, odl_user_12345-Missing Required Sensitivity Classification
 13. (Optional) In the Description box, enter a description for the rule.
 <br/>We want to ensure that we are clearly stating the intention behind the rule. Enter the following description: "This control looks for any buckets that contain unstructured data, such as Word files, PDFs, and text files, that are not tagged with one of the required sensitive classification levels. The intention is to find the resources so we can remediate them before they become a problem. It also satisfies our compliance requirement to periodically review resources for proper tagging."
 14. In the Recommendations box, enter a description of how to remeidate any resources that have this issue. 
 <br/>It is best practice to provide guidance on how to resolve any resulting issues. For example, in our scenario, we can use "To resolve this issue, review all unstructured files on this bucket and ensure that they have the correct sensitivity classification tag setting. All files should be tagged as 'Secret', 'Confidential', or 'Unclassified'."
 15. To save the control, click **Create Control**.
-<br/><ins>Expected Result:</ins> The New Controls page closes and you return to the graph. You can navigate to the Policies > Controls page, and click the **All controlls outide framewoirk** to find the new control.
-![Custom Control](img/dspm-control-final.png)
-
-
+<br/><ins>Expected Result:</ins> The New Controls page closes and you return to the graph. 
 
 ### Task 4. Verify the results of the data scan
-1. In the Wiz portal, navigate to **Explorer > Security Graph**.
-<br/><ins>Expected Result:</ins> The Security Graph page appears. 
-2. Click on **FIND Cloud Resource...** and select **Bucket**.
-3. Click the **+** to the right of that new node and select the **Name** property.
-4. In the contains box, enter <code>s3-fileshare-rbm</code>.
-5. Click on the resulting node to open the Details drawer.
-6. On the Overview tab, scroll down to the Disk Scans section. Verify that the Data Scan has completed since you triggered the rescan. 
-<br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
-<br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
-7. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
-<br/><ins>Expected Result:</ins> You find a match for the following files in the data findings. If you expand that finding:
+1. In the Wiz portal, navigate to **Policies > Controls**.
+<br/><ins>Expected Result:</ins> The Controls page appears. 
+2. Click on **All controlls outide framewoirk...** and scroll down until you find the control you just defined.
+3. Click on the  ***\<login-username\>-Missing Required Sensitivity Classification** control to open the control drawer page. 
+![Custom Control](img/dspm-control-final.png)
+4. To see which resources match the control, click the **View on graph** button.
+<br/><ins>Expected Result:</ins> The Security Graph page appears with the query defined and the results appear in the table view.
 
-# TBW 
+**Note:** Assumeing there are findings in the results list above, issues will also filre for this rule within ~24 hours. 
+
+# END OF LAB
 
