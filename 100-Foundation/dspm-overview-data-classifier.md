@@ -66,10 +66,11 @@ As we are focused on proprietary information, this rule does not match any known
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resource...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
-4. In the contains box, enter <code>s3-fileshare-rbm</code>.
+4. In the equals box, enter <code>s3-fileshare-rbm</code>.
+<br/>**Tips:** Use equals for the fastest results. In exact string matches require additional processing. 
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
-<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive an error message.
+<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive a message about a recent request.
 
 ### Task 3. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
