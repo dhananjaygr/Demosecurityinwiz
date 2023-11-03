@@ -8,8 +8,8 @@ In this exercise, we will a custom data classifier that scans files for any of t
 
 The tasks to perform are as follows:
 * First, we will define the a data match rule that evaluates all three criteria.
-* Second, we will define a control that looks for files that do no matchj on the rule.  
 * Second, once the rule is completed we will rescan a bucket resource to see if our rules fire on any of its contents.
+* Third, we will define a control that looks for buckets that data on them but none of it matches the data match rule we defined.  
 * Last, we will review our results to see whether the control finds any data stores that include data but that data i not tagged with the data finding we created.
 
 ### Expected Outcomes
@@ -39,7 +39,17 @@ As we are focused on proprietariy information, this rule does not match any know
 12. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expected Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
-### Task 2. Define the control
+### Task 2. Scan the bucket to test your finding
+1. In the Wiz portal, navigate to **Explorer > Security Graph**.
+<br/><ins>Expected Result:</ins> The Security Graph page appears. 
+2. Click on **FIND Cloud Resource...** and select **Bucket**.
+3. Click the **+** to the right of that new node and select the **Name** property.
+4. In the contains box, enter <code>s3-fileshare-rbm</code>.
+5. Click on the resulting node to open the Details drawer.
+6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
+<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive an error message.
+
+### Task 3. Define the control
 
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
@@ -67,16 +77,6 @@ As we are focused on proprietariy information, this rule does not match any know
 
 
 https://app.wiz.io/graph#~(view~'table~query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~negate~true~with~(type~(~'DATA_FINDING)~where~(dataClassifierId~(EQUALS~(~'CUSTOM-5e7ceb62-c881-4f58-af8b-5c07e9edac2f)))))~(type~(~(type~'HAS_DATA_STORE))~with~(type~(~'DATA_STORE)~select~true~where~(isStructured~(EQUALS~false)))))))
-
-### Task 3. Scan the bucket to test your finding
-1. In the Wiz portal, navigate to **Explorer > Security Graph**.
-<br/><ins>Expected Result:</ins> The Security Graph page appears. 
-2. Click on **FIND Cloud Resource...** and select **Bucket**.
-3. Click the **+** to the right of that new node and select the **Name** property.
-4. In the contains box, enter <code>s3-fileshare-rbm</code>.
-5. Click on the resulting node to open the Details drawer.
-6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
-<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive an error message.
 
 ### Task 4. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
