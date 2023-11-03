@@ -10,11 +10,11 @@ The tasks to perform are as follows:
 * First, we will define the a data match rule that evaluates all three criteria.
 * Second, we will define a control that looks for files that do no matchj on the rule.  
 * Second, once the rule is completed we will rescan a bucket resource to see if our rules fire on any of its contents.
-* Last, we will review our results and **TBWRITTENTHINTHERE***
+* Last, we will review our results to see whether the control finds any data stores that include data but that data i not tagged with the data finding we created.
 
 ### Expected Outcomes
 
-Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifier. 
+Once the rules are defined and the bucket is rescanned, we will see some resources that . 
 
 ### Task 1. Create the data classifier rule that matches on any of the supported classification levels
 1. In the Wiz portal, scope resources down to the WizLabs project by seleting **WizLabs** from the Projects list.
@@ -44,14 +44,19 @@ As we are focused on proprietariy information, this rule does not match any know
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resource...** and select **Bucket**.
-3. Click + to the right of the bucket to add a condition and select **Data Finding**.
-4. Click + to the right of the Data Finding and select **Classifer**, select **Equals** and then select the controld you defined in Task 1, such as odl_user_12345-dspmlab-data-classifications-any
-
-Create the control, click **Save as control**
+3. Click **+** to the right of the bucket object to add a condition and select **Data Finding: that alerted on it**.
+4. Click **+** to the right of the Data Finding and select **Classifer**, select **Equals**, and then select the controld you defined in Task 1, such as *odl_user_12345-dspmlab-data-classifications-any*..
+5. What we see now is all of the buckets where that finding fired. We want to see the opposite, so select the eye at the end of the data classifier clause and select **Negate Relation**.
+<br/><ins>Expected Result:</ins> The negated clause reads THAT NOT Has Alerting Data Finding WHERE Classifier equals odl_user_12345-dspmlab-data-classifications-any. This change indicates that you want to see any bucket where this classifer did not generate a finding. And that is good, but we are not scanning things like database for these finds of files. We know that by and large, we care about undstructured data, such as PDFs, Docx, and text files.
+6. To narrow down to buckets that have unstructured data without the finding, let's add the following. Next to the Bucket node, click the **+** aggain, and select **Data Store that stored on it**.
+7. Click **+** to the right of the Data Store object and select the Structured equals flag.
+8. We just said that we don't want structured data, so lets set the value of that Structured equals flag to **False**.
+<br/>Let's consider this query now. We are finding buckets that have occurences of unstructured data, but they do not hjave any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files probably care about, but none of those files have been tagged using the data classification system our manager wants us to check for. So this is a good start. Now let's save this as a control so that we can get an issue generated everytime this rule files, so we can see them at a resource level.  
+9. To create the control, click **Save as control** to the right of the query.
 <br/><ins>Expected Result:</ins> The New Control page appears.
 
 
-8. From the Severity dropdown box, select **High**. While the data sesntivity level is medium, this is a resoruce wide issue. 
+10. From the Severity dropdown box, select **High**. While the data sesntivity level is medium, this is a resoruce wide issue. 
 
 4. In the Name box, enter a name for this rule using the following format *\<login-username\>-odl_user_12345-Missing Required Sensitivity Classification
 \* (for example, odl_user_12345-Missing Required Sensitivity Classification
@@ -61,7 +66,7 @@ Create the control, click **Save as control**
 
 
 
-https://app.wiz.io/graph#~(view~'table~query~(type~(~'DATA_RESOURCE)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~negate~true~with~(type~(~'DATA_FINDING)~where~(dataClassifierId~(EQUALS~(~'CUSTOM-5e7ceb62-c881-4f58-af8b-5c07e9edac2f)))))~(type~(~(type~'HAS_DATA_STORE))~with~(type~(~'DATA_STORE)~select~true~where~(isStructured~(EQUALS~false)))))))
+https://app.wiz.io/graph#~(view~'table~query~(type~(~'BUCKET)~select~true~relationships~(~(type~(~(type~'HAS_DATA_FINDING))~negate~true~with~(type~(~'DATA_FINDING)~where~(dataClassifierId~(EQUALS~(~'CUSTOM-5e7ceb62-c881-4f58-af8b-5c07e9edac2f)))))~(type~(~(type~'HAS_DATA_STORE))~with~(type~(~'DATA_STORE)~select~true~where~(isStructured~(EQUALS~false)))))))
 
 ### Task 3. Scan the bucket to test your finding
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
