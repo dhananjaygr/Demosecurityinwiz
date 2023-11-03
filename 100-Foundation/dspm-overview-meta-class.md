@@ -19,7 +19,6 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 <br/><ins>Expected Result:</ins> The New Data Classification Rule page appears. 
 3. Under Classification Type, select **Metadata match**.
 4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
-<br/>**Tip:** A useful convention for being able to understanding finding types at a glance on resources is to include the Data Type as a prefix to the rule. 
 5. (Optional) In the Description box, enter a description for the rule.
 <br/>This field is useful for providing context for other users. While not necessary for this lab, it is best practice to state the purpose of the rule and use cases that it is expected to address. For example, "Identify working patent documents that are not submitted or granted. The expectation is to prevent any accidental public exposure of this material prior to patent submission when we can lock in the timestamp for submission. Expected to scan Word, PDF, and text file titles with the required title string 'draft-patent-filing' anywhere in the title of the file."
 6. From the Data Type dropdown, select **Other**. <br/>
