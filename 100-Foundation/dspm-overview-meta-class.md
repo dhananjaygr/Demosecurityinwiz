@@ -4,9 +4,9 @@
 
 In this exercise, we will create a custom metadata classifier that finds any files with "draft-patent-filing" in the title. The rule should generate data finding if such a file is detected. 
 
-* First, we will define the classifier severity level as "Critical" to reflect the sensitive nature of the content. 
-* Second, once this rule is completed, we will rescan a bucket resource to see if our rule fires on any of its contents.
-* Last, we will verify our rule by reviewing the finding results. 
+* First, we define the classifier severity level as "Critical" to reflect the sensitive nature of the content. 
+* Second, we rescan a bucket resource to see if our rule fires on any of its contents.
+* Last, we verify our rule by reviewing the finding results. 
 
 ### Expected Outcomes
 
