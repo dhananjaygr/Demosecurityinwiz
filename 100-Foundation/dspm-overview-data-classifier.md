@@ -47,7 +47,7 @@ The following guidance should be used when defining these classifiers:
 4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-data-\<classification-level\>* (for example, odl_user_#####-dspmlab-data-classification-confidential).
 5. (Optional) In the Description box, enter a description for the rule.
 <br/>Use the guidance from above.
-6. From the Data Type dropdown , select **Other**. <br/>
+6. From the Data Type dropdown, select **Other**. <br/>
 As we are focused on proprietary information, this rule does not match any known definitions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
 <br/>Aligning to a compliance framework may be part of your organization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
@@ -64,17 +64,17 @@ As we are focused on proprietary information, this rule does not match any known
 ### Task 2. Scan the bucket to test your finding
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
-2. Click on **FIND Cloud Resouce...** and select **Bucket**.
+2. Click on **FIND Cloud Resource...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
-<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will recieve an error message.
+<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will receive an error message.
 
 ### Task 3. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
-2. Click on **FIND Cloud Resouce...** and select **Bucket**.
+2. Click on **FIND Cloud Resource...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
