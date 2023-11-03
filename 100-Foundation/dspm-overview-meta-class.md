@@ -60,8 +60,8 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. On the Overview tab, scroll down to the Disk Scans section. Verify that the Data Scan has completed since you triggered the rescan. 
-<br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
-<br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
+- If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
+- If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
 7. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
 <br/><ins>Expected Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files named *project-wowie-zowie-draft-patent-filing-financial-analysis.xlsx*
 and *project-wowie-zowie-draft-patent-filing-v1.docx*.
