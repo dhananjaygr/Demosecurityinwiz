@@ -16,7 +16,7 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 
 1. In the Wiz portal, scope resources down to the WizLabs project by seleting **WizLabs** from the Projects list.
 2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
-<br/><ins>Expeted Result:</ins> The New Data Classification Rule page appears. 
+<br/><ins>Expected Result:</ins> The New Data Classification Rule page appears. 
 3. Under Classification Type, select **Metadata match**.
 4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
 <br/>**Tip:** A useful convention for being able to understanding finding types at a glance on resources is to incldue the Data Type as a prefix to the rule. 
@@ -28,7 +28,7 @@ As we are focused on proprietariy information, this rule does not match any know
 <br/> Aligning to a compliance framework may be part of your orgnaization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
 8. From the Severity dropdown box, select **Critical**.
-<br/>Severity of the data classifier is only part of the formula that is used to designate the sevrity of any relatred data finding. Remember that it is the number of unique occurences.
+<br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 9. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
 <br/>In this regular expression, the following is true:
 * <code>.*</code> matches any character (except for a newline) zero or more times, 
@@ -41,21 +41,21 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 <br/>In this example, we consider the size of a blank Word file as the minimum file size, which is about 12k. Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
 11. Click **Create rule** to save the rule in the Wiz tenant.
-<br/><ins>Expeted Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
+<br/><ins>Expected Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
 ### Task 2. Scan the bucket to test your finding
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
-<br/><ins>Expeted Result:</ins> The Security Graph page appears. 
+<br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resouce...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. At the top of the drawer, click the <code>&#x22EE;</code> in the upper right to open the More options menu and click **Rescan resource**.
-<br/><ins>Expeted Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will recieve an error message.
+<br/><ins>Expected Result:</ins> There will be no visual cue that the rescan started. If you try to start it again, you will recieve an error message.
 
 ### Task 3. Verify the results of the data scan
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
-<br/><ins>Expeted Result:</ins> The Security Graph page appears. 
+<br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resouce...** and select **Bucket**.
 3. Click the **+** to the right of that new node and select the **Name** property.
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
@@ -64,5 +64,5 @@ This regular expression will match the string "draft-patent-filing" anywhere wit
 <br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
 <br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
 7. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
-<br/><ins>Expeted Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files named *project-wowie-zowie-draft-patent-filing-financial-analysis.xlsx*
+<br/><ins>Expected Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files named *project-wowie-zowie-draft-patent-filing-financial-analysis.xlsx*
 and *project-wowie-zowie-draft-patent-filing-v1.docx*.
