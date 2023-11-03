@@ -2,10 +2,10 @@
 
 ### Scope
 
-In this exercise, we three custom data classifiers to scan files for each of the sensitivity levels. These rules should generate data finding if such a file is detected. 
-The tasks to perform are as follows:
+In this exercise, we create three custom data classifiers to scan files for each sensitivity level. These rules generate data finding on the resource where such a file is detected. 
+The task flow is as follows:
 * First, we define the three data match rules. 
-* Second, we rescan a bucket resource to see if our rules fire on any of its contents.
+* Second, we rescan the bucket resource to see if our rules fire on any of its contents.
 * Last, we verify our rules by reviewing the finding results. 
 
 ### Expected Outcomes
@@ -13,29 +13,30 @@ The tasks to perform are as follows:
 Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifier. 
 
 ### Scenario Guidance
-The following guidance should be used when defining these classifiers:
+
+Ehen defining these classifiers in Task 1, use the following guidance:
 
 #### Secret Classification Rule
-* For a rule name use *\<login-username\>-dspmlab-data-secret.
-* Set the Description to "Generate a finding for any files that are marked with a classification level of secret."
+* For the rule name, use *\<login-username\>-dspmlab-data-secret.
+* Set the Description to "Generate a finding for any files marked with a classification level of secret."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bSecret\b</code>.
-* For the rule that scans for the "Secret" classification level, we will define the classifier severity level as "Critical" to reflect the sensitive nature of the content.
+* Define the classifier severity level as "Critical" to reflect the sensitive nature of secret content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
 
 #### Confidential Classification Rule
-* For a rule name use *\<login-username\>-dspmlab-data-confidential.
-* Set the Description to "Generate a finding for any files that are marked with a classification level of confidential."
+* For the rule name, use *\<login-username\>-dspmlab-data-confidential.
+* Set the Description to "Generate a finding for any files marked with a classification level of confidential."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bConfidential\b</code>.
-* For the rule that scans for the "Confidential" classification level, we will define the classifier severity level as "High" to reflect the sensitive nature of the content.
+* Define the classifier severity level as "High" to reflect the sensitive nature of confidential content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
 
 #### Unclassified Classification Rule
-* For a rule name use *\<login-username\>-dspmlab-data-unclassified.
-* Set the Description to "Generate a finding for any files that are marked with a classification level of unclassified."
+* For the rule name, use *\<login-username\>-dspmlab-data-unclassified.
+* Set the Description to "Generate a finding for any files marked with a classification level of unclassified."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bUnclassified\b</code>.
-* For the rule that scans for the "Unclassified" classification level, we will define the classifier severity level as "Info" to reflect the nature of the content.
+* Define the classifier severity level as "Info" to reflect the nature of unclassified content.
 * Set the Minimum unique matches to 1.
 * From the Masking list, select Partial Mask.
 
@@ -80,11 +81,10 @@ As we are focused on proprietary information, this rule does not match any known
 4. In the contains box, enter <code>s3-fileshare-rbm</code>.
 5. Click on the resulting node to open the Details drawer.
 6. On the Overview tab, scroll down to the Disk Scans section. Verify that the Data Scan has completed since you triggered the rescan. 
-<br>If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
-<br>If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
+- If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
+- If it has refreshed, then click the **Data** drawer to see the findings and data analysis.
 7. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
 <br/><ins>Expected Result:</ins> You find a match for the following files in the data findings. If you expand that finding:
-
 * **Unclassified**. *rfp_request.docx* and *response_plan.docx*
 * **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*,
 *bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
