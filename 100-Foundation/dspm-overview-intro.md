@@ -14,4 +14,4 @@ For a refresher on some of the DSPM features in Wiz, see the following:
 
 ## Scenario
 
-You work for a military contractor that is required to tag all produced content with with an appropriate senstivity level. As they do not work on top secret projects, they are only required to tag using a "Secret", "Confidential", or "Unclassified" sensitivity label. 
+You work for a military contractor that is required to tag all produced content with an appropriate sensitivity level. As they do not work on top secret projects, they are only required to tag using a "Secret", "Confidential", or "Unclassified" sensitivity label. 
