@@ -1,6 +1,6 @@
-## Exercise: Create a metadata classifier
+# Create a metadata classifier
 
-### Scope
+## Scope
 
 In this exercise, we create a custom metadata classifier that finds any files with "draft-patent-filing" in the title. The rule should generate data finding if such a file is detected. 
 
@@ -12,36 +12,44 @@ In this exercise, we create a custom metadata classifier that finds any files wi
 
 Once the rule is defined and the bucket is rescanned, we will see some findings for the metadata classifier. 
 
-### Task 1. Create the metadata classifier rule
+## Task 1. Create the metadata classifier rule
 
 1. In the Wiz portal, scope resources down to the WizLabs project by selecting **WizLabs** from the Projects list.
-2. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
+
+1. Click **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 <br/><ins>Expected Result:</ins> The New Data Classification Rule page appears. 
-3. Under Classification Type, select **Metadata match**.
-4. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
-5. (Optional) In the Description box, enter a description for the rule.
+
+1. Under Classification Type, select **Metadata match**.
+
+1. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
+
+1. (Optional) In the Description box, enter a description for the rule.
 <br/>Use this field to provide context for other users. While unnecessary for this lab, best practice states the purpose of the rule and use cases that it is expected to address. For example, "Identify working patent documents that are not submitted or pending. The intention is to prevent accidental public exposure of such material prior to patent submission. Expected to scan Word, PDF, and text file titles with our required title string 'draft-patent-filing'."
-6. From the Data Type dropdown, select **Other**.
+
+1. From the Data Type dropdown, select **Other**.
 <br/>As we are focused on proprietary information, this rule does not match known definitions, such as PHI or PII. As these types are used as filters in other pages, strive to keep them as accurate as possible.
-7. (Optional) Under Framework categories, select the framework and category to which this rule should be aligned.
-<br/> Aligning to a compliance framework may be part of your organization-specific policies and governance. You will need to select an existing or custom compliance framework and then align to the correct category, which in this case, is usually Data Security or a sensitive data tracking category.
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
-8. From the Severity dropdown box, select **Critical**.
+
+1. From the Severity dropdown box, select **Critical**.
 <br/>Severity of the data classifier is only part of the formula used to designate the severity of a related data finding. Remember, it also considers the number of unique occurrences.
-9. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
+
+1. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
 <br/>In this regular expression, the following is true:
-* <code>.*</code> matches any character (except for a newline) zero or more times, 
-* <code>draft-patent-filing</code> is the literal string you want to match, 
-* <code>.*</code> again matches any character zero or more times.
+  * <code>.*</code> matches any character (except for a newline) zero or more times, 
+  * <code>draft-patent-filing</code> is the literal string you want to match, 
+  * <code>.*</code> again matches any character zero or more times.
 This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
 <br/>**Tip:** You can enter a few file name examples in the Test Text box, with the string appearing in various places within the filename, and click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. Less specific is better. For example, the query 'I need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' generates the expression used above. 
-10. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
+
+1. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
 <br/>**Tip:** Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 ![Metadata Match Properties](img/meta-data-match-criteria.png)
-11. Click **Create rule** to save the rule in the Wiz tenant.
+
+1. Click **Create rule** to save the rule in the Wiz tenant.
 <br/><ins>Expected Result:</ins> A user-defined rule appears among the list of rules on the Data Classification Rules page. 
 
-### Task 2. Scan the bucket to test your finding
+## Task 2. Scan the bucket to test your finding
+
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 <br/><ins>Expected Result:</ins> The Security Graph page appears. 
 2. Click on **FIND Cloud Resource...** and select **Bucket**.
