@@ -21,24 +21,24 @@ When defining these classifiers in Task 1, use the following guidance:
 * Set the Description to "Generate a finding for any files marked with a classification level of secret."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bSecret\b</code>.
 * Define the classifier severity level as "Critical" to reflect the sensitive nature of secret content.
-* Set the Minimum unique matches to 1.
-* From the Masking list, select Partial Mask.
+* Set the Minimum unique matches to **1**.
+* From the Masking list, select **Partial Mask**.
 
 #### Confidential Classification Rule
 * For the rule name, use *\<login-username\>-dspmlab-data-confidential*.
 * Set the Description to "Generate a finding for any files marked with a classification level of confidential."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bConfidential\b</code>.
 * Define the classifier severity level as "High" to reflect the sensitive nature of confidential content.
-* Set the Minimum unique matches to 1.
-* From the Masking list, select Partial Mask.
+* Set the Minimum unique matches to **1**.
+* From the Masking list, select **Partial Mask**.
 
 #### Unclassified Classification Rule
 * For the rule name, use *\<login-username\>-dspmlab-data-unclassified*.
 * Set the Description to "Generate a finding for any files marked with a classification level of unclassified."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bUnclassified\b</code>.
 * Define the classifier severity level as "Info" to reflect the nature of unclassified content.
-* Set the Minimum unique matches to 1.
-* From the Masking list, select Partial Mask.
+* Set the Minimum unique matches to **1**.
+* From the Masking list, select **Partial Mask**.
 
 ### Task 1. For each rule, follow these steps to create the data classifier rule
 1. In the Wiz portal, scope resources down to the WizLabs project by selecting **WizLabs** from the Projects list.
