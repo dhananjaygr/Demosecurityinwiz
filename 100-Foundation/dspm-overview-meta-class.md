@@ -30,6 +30,10 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 <br/>As we are focused on proprietary information, this rule does not match known definitions, such as PHI or PII. As these types are used as filters in other pages, strive to keep them as accurate as possible.
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
 
+   <p align="left">
+       <img width="800" img src="img/meta-data-class-descript.png"/>
+        </p>
+
 1. From the Severity dropdown box, select **Critical**.
 <br/>Severity of the data classifier is only part of the formula used to designate the severity of a related data finding. Remember, it also considers the number of unique occurrences.
 
