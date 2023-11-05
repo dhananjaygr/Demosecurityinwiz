@@ -10,11 +10,11 @@ The task flow is as follows:
 
 ### Expected Outcomes
 
-Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifier. 
+Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifiers. 
 
 ### Scenario Guidance
 
-Ehen defining these classifiers in Task 1, use the following guidance:
+When defining these classifiers in Task 1, use the following guidance:
 
 #### Secret Classification Rule
 * For the rule name, use *\<login-username\>-dspmlab-data-secret.
