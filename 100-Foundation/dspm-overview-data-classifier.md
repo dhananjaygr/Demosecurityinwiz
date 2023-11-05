@@ -17,7 +17,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 When defining these classifiers in Task 1, use the following guidance:
 
 #### Secret Classification Rule
-* For the rule name, use *\<login-username\>-dspmlab-data-secret.
+* For the rule name, use \<login-username\>-dspmlab-data-secret.
 * Set the Description to "Generate a finding for any files marked with a classification level of secret."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bSecret\b</code>.
 * Define the classifier severity level as "Critical" to reflect the sensitive nature of secret content.
@@ -25,7 +25,7 @@ When defining these classifiers in Task 1, use the following guidance:
 * From the Masking list, select Partial Mask.
 
 #### Confidential Classification Rule
-* For the rule name, use *\<login-username\>-dspmlab-data-confidential.
+* For the rule name, use \<login-username\>-dspmlab-data-confidential.
 * Set the Description to "Generate a finding for any files marked with a classification level of confidential."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bConfidential\b</code>.
 * Define the classifier severity level as "High" to reflect the sensitive nature of confidential content.
@@ -33,7 +33,7 @@ When defining these classifiers in Task 1, use the following guidance:
 * From the Masking list, select Partial Mask.
 
 #### Unclassified Classification Rule
-* For the rule name, use *\<login-username\>-dspmlab-data-unclassified.
+* For the rule name, use \<login-username\>-dspmlab-data-unclassified.
 * Set the Description to "Generate a finding for any files marked with a classification level of unclassified."
 * Under Matcher logic for the Find text matching this Regex box, enter <code>\bUnclassified\b</code>.
 * Define the classifier severity level as "Info" to reflect the nature of unclassified content.
