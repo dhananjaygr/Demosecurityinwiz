@@ -31,7 +31,7 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png)
 
    <p align="left">
-       <img width="800" img src="img/meta-data-class-descript.png"/>
+       <img width="800" height="852" img src="img/meta-data-class-descript.png"/>
         </p>
 
 1. From the Severity dropdown box, select **Critical**.
