@@ -33,12 +33,13 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 1. From the Severity dropdown box, select **Critical**.
 <br/>Severity of the data classifier is only part of the formula used to designate the severity of a related data finding. Remember, it also considers the number of unique occurrences.
 
-1. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*bdraft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
+1. Under Matcher Logic in the Find text matching this Regex box, enter <code>.\*draft-patent-filing.\*</code>, which looks for the string 'draft-patent-filing' anywhere in the title of a file.
 <br/>In this regular expression, the following is true:
    - <code>.*</code> matches any character (except for a newline) zero or more times, 
    - <code>draft-patent-filing</code> is the literal string you want to match, 
    - <code>.*</code> again matches any character zero or more times.
    This regular expression will match the string "draft-patent-filing" anywhere within the filename or file type.
+   
    <br/>**Tip:** You can enter a few file name examples in the Test Text box, with the string appearing in various places within the filename, and    click Test Logic to make sure that it matches as you expect. It is best practice to validate the RegEx syntax before deploying it. When using https://regex101.com/, select the Golang flavor. If you are struggling with correct syntax, ChatGPT is adept at generating the text. Less specific is better. For example, the query 'I need a regular expression that matches for the string "draft-patent-filing" in any filename or file type' generates the expression used above. 
 
 1. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
