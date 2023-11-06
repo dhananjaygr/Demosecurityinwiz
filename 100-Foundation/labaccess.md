@@ -2,6 +2,7 @@
 ___
 <br/>
 In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will perform the exercises. 
+
 <br/>
 
 1. To access the the tenant, retrieve the credentials in the **Environment** tab.
