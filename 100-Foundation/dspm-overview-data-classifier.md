@@ -30,7 +30,7 @@ As we are focused on proprietary information, this rule does not match any known
     <br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
    <p align="left">
-       <img width="1000" height="1600" img src="img/data-match-descrip-1.png"/>
+       <img width="500" height="500" img src="img/data-match-descrip-1.png"/>
         </p>
 
 1. Under Matcher Logic in the **Find text matching this Regex** field, enter: <code>\bSecret\b</code>
@@ -40,7 +40,7 @@ As we are focused on proprietary information, this rule does not match any known
 1. In the Masking drop-down menu, select **Partial Mask**.
    
     <p align="left">
-       <img width="1000" height="1600" img src="img/data-match-matcher.png"/>
+       <img width="500" height="800" img src="img/data-match-matcher.png"/>
         </p>
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
