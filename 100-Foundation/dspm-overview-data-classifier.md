@@ -29,7 +29,9 @@ As we are focused on proprietary information, this rule does not match any known
 1. From the Severity dropdown box, select **Critical**.
     <br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
-    ![Data Classifier Rule Properties](img/data-match-descrip-1.png)
+   <p align="left">
+       <img width="1000" height="1600" img src="img/data-match-descrip-1.png"/>
+        </p>
 
 1. Under Matcher Logic in the **Find text matching this Regex** field, enter: <code>\bSecret\b</code>
 
