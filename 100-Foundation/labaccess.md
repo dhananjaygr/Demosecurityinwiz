@@ -1,6 +1,6 @@
 # Accessing your lab environment
 ___
-<br/>
+<br>
 In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will perform the exercises. 
 
 <br/>
