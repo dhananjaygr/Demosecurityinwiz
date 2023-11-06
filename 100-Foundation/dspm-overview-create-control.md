@@ -33,7 +33,9 @@ As we are focused on proprietary information, this rule does not match any known
 1. Under Matcher Logic in the Find text matching this Regex box, enter <code>\b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b</code>.
     <br/>This classifier uses '|' to define OR conditions between the possible matches. We've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' were lists first, it would match on both uses of confidential. While this appears to have no effect in the finding results, it dloes. The masked sample will be based on the full string of the match. 
 
-    ![Data Classifier Rule Properties](img/dspm-classifier-any-settings.png)
+    <p align="left">
+       <img width="1000" height="1600" img src="img/dspm-classifier-any-settings.png"/>
+        </p>
 
 1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
 
@@ -79,7 +81,9 @@ As we are focused on proprietary information, this rule does not match any known
 1. We just said that we don't want structured data, so let's set the value of that Structured equals flag to **False**.
     <br/>Let's consider this query now. We select buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files that we likely care about, but none of those files are tagged using the data classification system our manager asked us to check for. So this is a good start. Now let's save this as a control so we generate as issue each time this rule files. The resulting issues are a resource level view of our question so we can remediate each resource individually.
    
-    ![Data Classifier Control](img/dspm-control-no-classifier-hits.png)
+   <p align="left">
+       <img width="800" height="200" img src="img/dspm-control-no-classifier-hits.png"/>
+        </p>
    
 1. To create the control, click **Save as control** to the right of the query.
 <br/><ins>Expected Result:</ins> The New Control page appears.
@@ -102,7 +106,9 @@ As we are focused on proprietary information, this rule does not match any known
 
 1. Click on the  ***\<login-username\>-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
 
-   ![Custom Control](img/dspm-control-final.png)
+   <p align="left">
+       <img width="800" height="500" img src="img/dspm-control-final.png"/>
+        </p>
 
 1. To see which resources match the control, click the **View on Security Graph** button.
     <br/><ins>Expected Result:</ins> The Security Graph page appears with the query defined and the results appear in the table view.
