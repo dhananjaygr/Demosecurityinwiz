@@ -8,3 +8,8 @@ In this lab, you will be given access to the WizLabs Wiz tenant, where you will 
 
 1. Open a new Private/Incognito session in your browser, paste the WIZ Portal url, then use the Username and Password.
 
+   ![](img/login.png) 
+
+1. Once inside the Wiz tenant, ensure you are logged in with the correct user.
+
+   ![](img/wiz_user.png) 
