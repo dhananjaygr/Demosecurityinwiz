@@ -34,7 +34,7 @@ As we are focused on proprietary information, this rule does not match any known
     <br/>This classifier uses '|' to define OR conditions between the possible matches. We've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' were lists first, it would match on both uses of confidential. While this appears to have no effect in the finding results, it dloes. The masked sample will be based on the full string of the match. 
 
     <p align="left">
-       <img width="500" height="500" img src="img/dspm-classifier-any-settings.png"/>
+       <img width="400" height="500" img src="img/dspm-classifier-any-settings.png"/>
         </p>
 
 1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
