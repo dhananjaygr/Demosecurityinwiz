@@ -37,7 +37,9 @@ As we are focused on proprietary information, this rule does not match any known
   
 1. In the Masking drop-down menu, select **Partial Mask**.
    
-    ![Data Match Properties](img/data-match-matcher.png)
+    <p align="left">
+       <img width="1000" height="1600" img src="img/data-match-matcher.png"/>
+        </p>
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
  
