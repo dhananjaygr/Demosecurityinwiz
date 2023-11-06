@@ -81,7 +81,7 @@ As we are focused on proprietary information, this rule does not match any known
 1. We just said that we don't want structured data, so let's set the value of that Structured equals flag to **False**.
     <br/>Let's consider this query now. We select buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files that we likely care about, but none of those files are tagged using the data classification system our manager asked us to check for. So this is a good start. Now let's save this as a control so we generate as issue each time this rule files. The resulting issues are a resource level view of our question so we can remediate each resource individually.
    
-   <p align="left">
+    <p align="left">
        <img width="800" height="200" img src="img/dspm-control-no-classifier-hits.png"/>
         </p>
    
@@ -106,7 +106,7 @@ As we are focused on proprietary information, this rule does not match any known
 
 1. Click on the  ***\<login-username\>-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
 
-   <p align="left">
+    <p align="left">
        <img width="800" height="500" img src="img/dspm-control-final.png"/>
         </p>
 
