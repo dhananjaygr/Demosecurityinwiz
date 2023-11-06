@@ -27,7 +27,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 1. In the Data Type dropdown, select **Other**. <br/>
 As we are focused on proprietary information, this rule does not match any known definitions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 
-1. From the Severity dropdown box, select **High**. We pick a middle ground here leveraging the more exact matches on Secret and Classified to indicate greater concern.
+1. From the Severity dropdown box, select **Medium**. We pick a middle ground here leveraging the more exact matches on Secret and Classified to indicate greater concern.
     <br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
 1. Under Matcher Logic in the Find text matching this Regex box, enter <code>\b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b</code>.
@@ -70,14 +70,14 @@ As we are focused on proprietary information, this rule does not match any known
 1. Click **+** to the right of the Data Finding and select **Classifier**, select **Equals**, and then select the control you defined in Task 1, such as *odl_user_12345-dspmlab-data-classifications-any*..
 
 1. What we see now is all of the buckets where that finding fired. We want to see the opposite, so select the eye at the end of the data classifier clause and select **Negate Relation**.
-    <br/><ins>Expected Result:</ins> The negated clause reads THAT NOT Has Alerting Data Finding WHERE Classifier equals odl_user_12345-dspmlab-data-classifications-any. This change indicates that you want to see any bucket where this classifuer did not generate a finding. And that is good, but we are not scanning things like database for these finds of files. We know that by and large, we care about unstructured data, such as PDFs, Docx, and text files.
+<br/><ins>Expected Result:</ins> The negated clause reads *THAT NOT Has Alerting Data Finding WHERE Classifier equals odl_user_12345-dspmlab-data-classifications-any*. This change indicates that you want to see any bucket where this classifuer did not generate a finding. And that is good, but we do not want to scan resources like databases. We know that by and large, we care about unstructured data files, such as PDFs, Docx, and text files.
 
-1. To narrow down to buckets that have unstructured data without the finding, let's add the following. Next to the Bucket node, click the **+** again, and select **Data Store that stored on it**.
+1. To narrow down to buckets that have unstructured data without the finding, do the following. Next to the Bucket node, click the **+** again, and select **Data Store that stored on it**.
 
 1. Click **+** to the right of the Data Store object and select the **Structured** flag.
 
 1. We just said that we don't want structured data, so let's set the value of that Structured equals flag to **False**.
-    <br/>Let's consider this query now. We are finding buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files probably care about, but none of those files have been tagged using the data classification system our manager wants us to check for. So this is a good start. Now let's save this as a control so that we can get an issue generated every time this rule files, so we can see them at a resource level.
+    <br/>Let's consider this query now. We select buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files that we likely care about, but none of those files are tagged using the data classification system our manager asked us to check for. So this is a good start. Now let's save this as a control so we generate as issue each time this rule files. The resulting issues are a resource level view of our question so we can remediate each resource individually.
    
     ![Data Classifier Control](img/dspm-control-no-classifier-hits.png)
    
@@ -86,8 +86,7 @@ As we are focused on proprietary information, this rule does not match any known
 
 1. From the Issue Severity dropdown box, select **High**. While the data sensitivity level is medium, this is a resource wide issue. 
 
-1. In the Name box, enter a name for this rule using the following format *\<login-username\>-Missing Required Sensitivity Classification
-\* (for example, odl_user_12345-Missing Required Sensitivity Classification)
+1. In the Name box, enter a name for this rule using the following format *<login-username\>-Missing Required Sensitivity Classification* (for example, odl_user_12345-Missing Required Sensitivity Classification)
 
 1. In the Description box, enter the following description: "This control looks for any buckets that contain unstructured data, such as Word files, PDFs, and text files, that are not tagged with one of the required sensitive classification levels. The intention is to find the resources so we can remediate them before they become a problem. It also satisfies our compliance requirement to periodically review resources for proper tagging."
 
@@ -114,7 +113,6 @@ As we are focused on proprietary information, this rule does not match any known
 
     **Note:** In some cases, issues may take up to 24 hours to appear in the portal. 
 
-<br/>
 <br/>
 
 ### END OF LAB
