@@ -12,12 +12,14 @@ In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will
         </p>
 
 
-1. Open a new Private/Incognito session in your browser, paste the WIZ Portal url, then use the Username and Password.
+2. Open a new Private/Incognito session in your browser, paste the WIZ Portal url, then use the Username and Password.
 
-   ![](img/login.png) 
+  <p align="left">
+       <img width="800" height="400" img src="img/login.png"/>
+        </p>
+        
+3. Once inside the Wiz tenant, ensure you are logged in with the correct user.
 
-1. Once inside the Wiz tenant, ensure you are logged in with the correct user.
+   ![](img/wiz_user.png)
 
-   ![](img/wiz_user.png) 
-
-1. Proceed to the **Next** page.
+4. Proceed to the **Next** page.
