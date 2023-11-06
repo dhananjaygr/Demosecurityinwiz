@@ -7,9 +7,8 @@ In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will
 
 1. To access the the tenant, retrieve the credentials in the **Environment** tab.
 
-    ![](img/env_creds.png)
-       <p align="left">
-       <img width="800" height="200" img src="img/env_creds.png"/>
+   <p align="left">
+       <img width="800" height="400" img src="img/env_creds.png"/>
         </p>
 
 
