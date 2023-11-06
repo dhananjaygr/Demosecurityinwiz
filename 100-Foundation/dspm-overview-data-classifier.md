@@ -36,6 +36,7 @@ As we are focused on proprietary information, this rule does not match any known
 1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
   
 1. In the Masking drop-down menu, select **Partial Mask**.
+   
     ![Data Match Properties](img/data-match-matcher.png)
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
