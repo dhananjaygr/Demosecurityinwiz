@@ -1,6 +1,6 @@
 # Accessing your lab environment
-
-In this lab, you will be given access to the WizLabs Wiz tenant, where you will perform the exercises. 
+<br/>
+In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will perform the exercises. 
 
 1. To access the the tenant, retrieve the credentials in the **Environment** tab.
 
@@ -13,3 +13,5 @@ In this lab, you will be given access to the WizLabs Wiz tenant, where you will 
 1. Once inside the Wiz tenant, ensure you are logged in with the correct user.
 
    ![](img/wiz_user.png) 
+
+1. Proceed to the next page.
