@@ -4,17 +4,17 @@ Your manager wants you to ensure all files that stored with one of the required 
 
 **Note:** Wiz does not scan every resource on a bucket. Instead, it samples the files on a bucket. Keep this in mind. We will only be able to leverage the concepts in this lab based on a sample concept. However, we are leveraging multiple concepts to shine a light in the dark--it all helps.
 
-In this exercise, we will a custom data classifier that scans files for any of the sensitivity levels. This rule should generate a data finding for any file that has one of the sensitivity levels. We are using a single rule to match on any of those conditions (and a new one -- 'Confidential - Internally Use Only'). It is a lesson in "first match" evaluation within the data classification rule, as well as how to build more complicated evaluations using a control. 
+In this exercise, we will defeine a custom data classifier that scans files for any of the sensitivity levels. This rule generatew a data finding for any file that has one of the sensitivity levels. We use a single rule to match  any of those conditions (and a new condition -- 'Confidential - Internally Use Only'). This new condition is a lesson in "first match" evaluation within the data classification rule, as well as how to build more complicated evaluations using a control. 
 
 The tasks to perform are as follows:
-* First, we define a data match rule that evaluates all three criteria.
-* Second, we rescan a bucket resource to generate any findings for our rules.
-* Third, we define a control that looks for buckets that data on them but none of it matches the data match rule we defined.  
-* Last, we review our results to assess whether the control finds data stores that include data but where the data is not tagged with the data finding from our neew rule.
+* First, define a data match rule that evaluates all four criteria.
+* Second,  rescan a bucket resource to generate any findings for our rules.
+* Third, define a control that looks for buckets that data on them but none of it matches the data match rule we defined.  
+* Last, review the results to determine whether the control finds data stores with data but where that data does not match our neew rule. This results means the data has not been properly tagged.
 
 ## Expected Outcomes
 
-Once the rules are defined and the bucket is rescanned, we will see some resources that . 
+Once the rules are defined and the bucket is rescanned, we will see some data stores where the data has not been properly tagged. These reults indicate an all or nothing. In other words, if some of the resources are tagged, we won't match the control criteria. If none of them are tagged correctly, we will. 
 
 ## Task 1. Create the data classifier rule that matches on any of the supported classification levels
 
@@ -27,17 +27,18 @@ Once the rules are defined and the bucket is rescanned, we will see some resourc
 1. In the Data Type dropdown, select **Other**. <br/>
 As we are focused on proprietary information, this rule does not match any known definitions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 
-1. From the Severity dropdown box, select **Medium**. We are picking a middle ground here an leveraging the more exact matches on Secret and Classified to indicate greater concern.
+1. From the Severity dropdown box, select **High**. We pick a middle ground here leveraging the more exact matches on Secret and Classified to indicate greater concern.
     <br/>Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
 1. Under Matcher Logic in the Find text matching this Regex box, enter <code>\b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b</code>.
-    <br/>This classifier uses '|' to OR the matches; and we've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' where first, it would match on all of the conditions. While this appears to have no effect in the finding results, that is not true. The masked sample will be based on the initial hit. 
+    <br/>This classifier uses '|' to define OR conditions between the possible matches. We've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' were lists first, it would match on both uses of confidential. While this appears to have no effect in the finding results, it dloes. The masked sample will be based on the full string of the match. 
 
     ![Data Classifier Rule Properties](img/dspm-classifier-any-settings.png)
 
 1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
 
 1. In the Masking drop-down meny, select **Partial Mask**.
+<br/>We select partial mask so we can get an idea of what we are seeing in the files. A full mask does not let us scan quickly to see what content is being tagged. This is especially useful when you have OR conditions in the matcher. 
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
 
