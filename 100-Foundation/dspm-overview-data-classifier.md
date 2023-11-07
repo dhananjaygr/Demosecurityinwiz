@@ -1,4 +1,4 @@
-<div style="margin-right: 50px;">
+<div style="margin-right: 50px; margin-left: 30px">
 
 # Exercise: Create a custom data classifier
 ___
