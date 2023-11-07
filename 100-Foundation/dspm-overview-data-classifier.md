@@ -1,4 +1,5 @@
-# Exercise: Create a custom data classifier
+<div style="margin-right: 30px;">
+# Exercise: Create a custom data classifier2
 ___
 
 ## Scope
@@ -123,3 +124,4 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
         - **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*, *bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
         - **Secret**. *supplies.docx*.
 
+</div>
