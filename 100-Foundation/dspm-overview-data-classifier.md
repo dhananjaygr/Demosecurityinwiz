@@ -27,7 +27,10 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
 1. In the Name box, enter: 
 
-    ```odl_user_######-dspmlab-data-secret```
+    ```
+    odl_user_######-dspmlab-data-secret
+    ```
+    `odl_user_######-dspmlab-data-secret`
 
         odl_user_######-dspmlab-data-secret
    
