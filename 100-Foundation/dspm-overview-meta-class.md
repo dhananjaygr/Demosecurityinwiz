@@ -1,3 +1,5 @@
+<div style="margin-right: 50px; margin-left: 30px;">
+
 # Create a metadata classifier
 
 ## Scope
@@ -69,3 +71,6 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 1. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
 <br/><ins>Expected Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files named *project-wowie-zowie-draft-patent-filing-financial-analysis.xlsx*
 and *project-wowie-zowie-draft-patent-filing-v1.docx*.
+
+
+</div>

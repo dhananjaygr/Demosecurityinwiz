@@ -113,10 +113,9 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
     <u>Expected Result:</u> There will be no visual cue that the rescan started. If you try to start it again, you will receive a message about a recent request.
 
 1. On the Overview tab, scroll down to the Disk Scans section. Look at the **Last sucessful scan** column and verify that the Data Scan has completed since you triggered the rescan. 
-    
+
     - If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
     - If it has refreshed, then scroll up and on the left side click the **Data** drawer to see the findings and data analysis.
-
 
 1. Under *Has alerting Data Findings*, scroll through the list of findings until you see the matches for the rules that you defined. You may have to click **Load more** to see your results.
     - If you can't see Data Findings that match your rules, try re-scanning the Bucket for a 2nd time.

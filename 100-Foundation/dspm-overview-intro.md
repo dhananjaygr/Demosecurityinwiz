@@ -1,3 +1,5 @@
+<div style="margin-right: 50px; margin-left: 30px;">
+
 # DSPM: Defining Custom Classifiers
 ___
 
@@ -17,3 +19,5 @@ For a refresher on DSPM features in Wiz, see the following:
 ## Scenario
 <br>
 You work for a military contractor that is required to tag all content with an appropriate sensitivity level. As they do not work on top secret projects, they are only required to tag  content using a "Secret", "Confidential", or "Unclassified" sensitivity label. There is an S3 bucket, named s3-fileshare-rbm, where they have been storing files.
+
+</div>

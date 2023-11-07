@@ -1,3 +1,5 @@
+<div style="margin-right: 50px; margin-left: 30px;">
+
 # Exercise: Create a control for data resources that are not in compliance with the data classification labeling
 ___
 
@@ -185,3 +187,4 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 Go back to the Lab page, and click on the trash can icon, next to the time. This will end your lab.
 
+</div>

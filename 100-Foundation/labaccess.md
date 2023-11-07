@@ -1,3 +1,5 @@
+<div style="margin-right: 50px; margin-left: 30px;">
+
 # Accessing your lab environment
 ___
 <br>
@@ -24,3 +26,5 @@ In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will
         </p>
 
 1. Proceed to the **Next** page.
+
+</div>
