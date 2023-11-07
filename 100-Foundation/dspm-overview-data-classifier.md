@@ -1,11 +1,13 @@
-<div style="margin-right: 30px;">
-# Exercise: Create a custom data classifier2
+<div style="margin-right: 50px;">
+
+# Exercise: Create a custom data classifier
 ___
 
 ## Scope
 <br>
 In this exercise, we create three custom data classifiers to scan files for each sensitivity level. These rules generate data finding on the resource where such a file is detected. 
 The task flow is as follows:
+
 * First, we define the three data match rules. 
 * Second, we rescan the bucket resource to see if our rules fire on any of its contents.
 * Last, we verify our rules by reviewing the finding results. 
