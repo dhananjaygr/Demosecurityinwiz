@@ -29,7 +29,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
     <div style="margin-right: 30px;">
    
-        ```odl_user_######-dspmlab-data-secret```
+        odl_user_######-dspmlab-data-secret
     
     </div>
 1. In the Description box, enter:
