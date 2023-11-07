@@ -37,7 +37,6 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
     <div style="margin-right: 150px;">
 
         "Generate a finding for any files marked with a classification level of secret."
-        
     </div>
     
 1. From the Data Type dropdown, select **Other**.
