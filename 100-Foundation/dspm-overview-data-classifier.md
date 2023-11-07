@@ -121,7 +121,8 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 1. Under *Has alerting Data Findings*, scroll through the list of findings until you see the matches for the rules that you defined. You may have to click **Load more** to see your results.
     - If you can't see Data Findings that match your rules, try re-scanning the Bucket for a 2nd time.
         <br>
-        <u>Expected Result:</u> You find a match for the following files in the data findings. If you expand that finding:
+        <ins>Expected Result</ins>: You find a match for the following files in the data findings. If you expand that finding:
+        
         - **Unclassified**. *rfp_request.docx* and *response_plan.docx*
         - **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*, *bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
         - **Secret**. *supplies.docx*.
