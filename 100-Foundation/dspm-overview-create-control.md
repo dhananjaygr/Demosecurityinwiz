@@ -27,7 +27,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. In the Name field, enter:
 
+    <div style="margin-right: 150px;">
+
         odl_user_######-dspmlab-data-class-any
+    
+    </div>
 
 1. In the Data Type dropdown, select **Other**.
 
@@ -39,7 +43,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Under Matcher Logic in the Find text matching this Regex box, enter: 
 
+    <div style="margin-right: 150px;">
+
         \b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b
+
+    </div>
     
     This classifier uses '|' to define OR conditions between the possible matches. We've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' were lists first, it would match on both uses of confidential. While this appears to have no effect in the finding results, it dloes. The masked sample will be based on the full string of the match. 
 
@@ -69,7 +77,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Change the operator to equals, then enter: 
 
+    <div style="margin-right: 150px;">
+
         s3-fileshare-rbm
+
+    </div>
 
     **Tip:** Use equals for the fastest results. Inexact string matches require additional processing. 
 
@@ -117,7 +129,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. In the Name box, enter a name for this rule using the following format:
 
+    <div style="margin-right: 150px;">
+
         odl_user_#######-Missing Required Sensitivity Classification
+
+    </div>
 
 1. In the Description box, enter the following description: 
 
@@ -139,7 +155,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click on **All controls outside framework** and scroll down until you find the control you just defined.
 
-1. Click on the  **odl_user_#######-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
+1. Click on the  `**odl_user_#######-Missing Required Sensitivity Classification**` control (*your control*) to open the control drawer page. 
 
     <p align="left">
        <img width="600" height="434" img src="img/dspm-control-final.png"/>
