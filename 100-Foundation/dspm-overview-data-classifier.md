@@ -35,11 +35,9 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 1. In the Description box, enter:
 
     <div style="margin-right: 150px;">
-    <body style="background: rgb(73, 80, 87);">
 
         "Generate a finding for any files marked with a classification level of secret."
         
-        </body>
     </div>
     
 1. From the Data Type dropdown, select **Other**.
