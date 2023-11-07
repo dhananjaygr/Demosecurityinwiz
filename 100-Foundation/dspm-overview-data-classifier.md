@@ -34,8 +34,14 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
     </div>
 1. In the Description box, enter:
 
+    <div style="margin-right: 150px;">
+    <body style="background: red;">
+
         "Generate a finding for any files marked with a classification level of secret."
 
+    </body>
+    </div>
+    
 1. From the Data Type dropdown, select **Other**.
 
     As we are focused on proprietary information, this rule does not match any known definitions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
