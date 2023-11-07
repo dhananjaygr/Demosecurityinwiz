@@ -137,11 +137,19 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. In the Description box, enter the following description: 
 
+    <div style="margin-right: 150px;">
+
         This control looks for any buckets that contain unstructured data, such as Word files, PDFs, and text files, that are not tagged with one of the required sensitive classification levels. The intention is to find the resources so we can remediate them before they become a problem. It also satisfies our compliance requirement to periodically review resources for proper tagging.
+
+    </div>
 
 1. In the Recommendations box, enter a description of how to remediate any resources that have this issue. In our scenario, we can use: 
 
+    <div style="margin-right: 150px;">
+
         To resolve this issue, review all unstructured files on this bucket and ensure that they have the correct sensitivity classification tag setting. All files should be tagged as 'Secret', 'Confidential', or 'Unclassified'.
+
+    </div>
 
 1. To save the control, click **Create Control**.
 
