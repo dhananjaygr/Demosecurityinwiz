@@ -55,7 +55,10 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
 
+<br>
+
 ## Task 2. Scan the bucket to test your finding
+
 <br>
 
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
@@ -78,7 +81,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Close the bucket drawer.
 
+<br>
+
 ## Task 3. Define the control
+
+<br>
 
 1. In the Security Graph page, click on **New**.
 
@@ -122,13 +129,17 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. To save the control, click **Create Control**.
 
+<br>
+
 ### Task 4. Verify the results of the data scan
+
+<br>
 
 1. Navigate to **Policies > Controls**.
 
 1. Click on **All controls outside framework** and scroll down until you find the control you just defined.
 
-1. Click on the  ***\<login-username\>-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
+1. Click on the  **odl_user_#######-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
 
     <p align="left">
        <img width="600" height="434" img src="img/dspm-control-final.png"/>

@@ -9,12 +9,17 @@ The task flow is as follows:
 * Second, we rescan the bucket resource to see if our rules fire on any of its contents.
 * Last, we verify our rules by reviewing the finding results. 
 
+<br>
+
 ## Expected Outcomes
 
 Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifiers. 
 
+<br>
 
 ## Task 1. For each rule, follow these steps to create the data classifier rule
+
+<br>
 
 1. In the Wiz portal, navigate to **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 
@@ -54,7 +59,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
  
-***Create two more rules repeating the steps in Task 1, with the following information:***
+#### ***Create two more rules repeating the steps in Task 1, with the following information:***
 
 #### Confidential Classification Rule
 * Rule name: *\<login-username\>-dspmlab-data-confidential*
@@ -74,8 +79,12 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 * Set the Minimum unique matches to **1**.
 * From the Masking list, select **Partial Mask**.
 
+<br>
 
 ## Task 2. Scan the bucket to test your finding
+
+<br>
+
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 
 1. Click on **FIND Cloud Resource...** and select **Bucket**.
@@ -84,7 +93,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
 1. Change the operator to equals, then enter:
 
-        s3-fileshare-rbm<
+        s3-fileshare-rbm
 
     **Tip:** Use equals for the fastest results. Inexact string matches require additional processing.
 
@@ -97,13 +106,13 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 1. On the Overview tab, scroll down to the Disk Scans section. Look at the **Last sucessful scan** column and verify that the Data Scan has completed since you triggered the rescan. 
     - If not, then wait longer. You will have to reopen the drawer to refresh the data pulled. 
     - If it has refreshed, then scroll up and on the left side click the **Data** drawer to see the findings and data analysis.
-  
+
+
 1. Under Has alerting Data Findings, scroll through the list of findings until you see the matches for the rules that you defined. You may have to click **Load more** to see your results.
     - If you can't see Data Findings that match your rules, try re-scanning the Bucket for a 2nd time.
         
         <u>Expected Result:</u> You find a match for the following files in the data findings. If you expand that finding:
         - **Unclassified**. *rfp_request.docx* and *response_plan.docx*
-        - **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*,
-*bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
+        - **Classified**. *Archive.zip->faq-check.txt*, *Archive/bizplan.DOCX*, *Archive/faq-check.txt*, *bizplan_3.docx*,*deployment_plan.docx*, and *faq-check.txt*.
         - **Secret**. *supplies.docx*.
 
