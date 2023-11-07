@@ -34,12 +34,12 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
     </div>
 1. In the Description box, enter:
 
-    <div style="margin-right: 10px;">
-    <p style="background-color: rgb(73, 80, 87);">
+    <div style="margin-right: 50px;">
+    <body style="background-color: rgb(73, 80, 87);">
 
         "Generate a finding for any files marked with a classification level of secret."
 
-        </p>
+        </body>
     </div>
     
 1. From the Data Type dropdown, select **Other**.
