@@ -27,7 +27,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
 1. In the Name box, enter: 
 
-    <div style="margin-right: 30px;">
+    <div style="margin-right: 150px;">
    
         odl_user_######-dspmlab-data-secret
     
