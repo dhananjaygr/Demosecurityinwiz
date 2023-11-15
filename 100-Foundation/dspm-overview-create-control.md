@@ -165,7 +165,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click on **All controls outside framework** and scroll down until you find the control you just defined.
 
-1. Click on the  `**<inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification**` control (*your control*) to open the control drawer page. 
+1. Click on the  `<inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification` control (*your control*) to open the control drawer page. 
 
     <p align="left">
        <img width="600" height="434" img src="img/dspm-control-final.png"/>
