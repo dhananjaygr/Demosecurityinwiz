@@ -72,7 +72,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 #### ***Create two more rules repeating the steps in Task 1, with the following information:***
 
 #### Confidential Classification Rule
-* Rule name: *<inject key="ODLUser"></inject>-dspmlab-data-confidential*
+* Rule name: *<inject enableCopy="false" key="ODLUser"></inject>-dspmlab-data-confidential*
 * Description: "Generate a finding for any files marked with a classification level of confidential."
 * Data Type: **Other**
 * Classifier severity level: **High**
@@ -81,7 +81,7 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 * From the Masking list, select **Partial Mask**.
 
 #### Unclassified Classification Rule
-* Rule name: *<inject key="ODLUser"></inject>-dspmlab-data-unclassified*
+* Rule name: *<inject key="ODLUser" enableCopy="false"></inject>-dspmlab-data-unclassified*
 * Description: "Generate a finding for any files marked with a classification level of unclassified."
 * Data Type: **Other**
 * Classifier severity level: **Info**
