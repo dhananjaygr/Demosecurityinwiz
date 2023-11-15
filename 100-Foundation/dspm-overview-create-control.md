@@ -107,7 +107,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click **+** to the right of the bucket object to add a condition and select **Data Finding: that alerted on it**.
 
-1. Click **+** to the right of the Data Finding and select **Classifier**, select **Equals**, and then select the control you defined in Task 1, such as `odl_user_#######-dspmlab-data-classifications-any`
+1. Click **+** to the right of the Data Finding and select **Classifier**, select **Equals**, and then select the control you defined in Task 1, such as `<inject key="ODLUser" enableCopy="false"></inject>-dspmlab-data-classifications-any`
 
 1. What we see now is all of the buckets where that finding fired. We want to see the opposite, so select the eye at the end of the data classifier clause and select **Negate Relation**.
     
