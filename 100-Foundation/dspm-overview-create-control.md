@@ -30,10 +30,10 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 1. In the Name field, enter:
 
     <div style="margin-right: 150px;">
-
-        odl_user_######-dspmlab-data-class-any
-    
-    </div>
+   
+         <inject key="ODLUser"></inject>-dspmlab-data-class-any
+   
+      </div>
 
 1. In the Data Type dropdown, select **Other**.
 
@@ -111,7 +111,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. What we see now is all of the buckets where that finding fired. We want to see the opposite, so select the eye at the end of the data classifier clause and select **Negate Relation**.
     
-    <u>Expected Result:</u> The negated clause reads *THAT NOT Has Alerting Data Finding WHERE Classifier equals odl_user_#######-dspmlab-data-classifications-any*. This change indicates that you want to see any bucket where this classifuer did not generate a finding. And that is good, but we do not want to scan resources like databases. We know that by and large, we care about unstructured data files, such as PDFs, Docx, and text files.
+    <u>Expected Result:</u> The negated clause reads *THAT NOT Has Alerting Data Finding WHERE Classifier equals <inject key="ODLUser" enableCopy="false"></inject>-dspmlab-data-classifications-any*. This change indicates that you want to see any bucket where this classifuer did not generate a finding. And that is good, but we do not want to scan resources like databases. We know that by and large, we care about unstructured data files, such as PDFs, Docx, and text files.
 
 1. To narrow down to buckets that have unstructured data without the finding, do the following. Next to the Bucket node, click the **+** again, and select **Data Store that stored on it**.
 
@@ -133,7 +133,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
     <div style="margin-right: 150px;">
 
-        odl_user_#######-Missing Required Sensitivity Classification
+       <inject key="ODLUser"></inject>-Missing Required Sensitivity Classification
 
     </div>
 
@@ -165,7 +165,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click on **All controls outside framework** and scroll down until you find the control you just defined.
 
-1. Click on the  `**odl_user_#######-Missing Required Sensitivity Classification**` control (*your control*) to open the control drawer page. 
+1. Click on the  `**<inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification**` control (*your control*) to open the control drawer page. 
 
     <p align="left">
        <img width="600" height="434" img src="img/dspm-control-final.png"/>
