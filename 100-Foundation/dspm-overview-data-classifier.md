@@ -28,7 +28,13 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 
 1. Under Classification Type, select **Data match**.
 
-1. In the Name box, enter: 
+1. In the Name box, enter:
+
+    <div style="margin-right: 150px;">
+   
+         <inject key="ODLUser"></inject>-dspmlab-data-secret
+   
+      </div>
 
     <div style="margin-right: 150px;">
    
