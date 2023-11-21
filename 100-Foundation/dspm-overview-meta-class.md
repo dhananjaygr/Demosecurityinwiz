@@ -21,7 +21,7 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 1. Under Classification Type, select **Metadata match**.
 
 1. In the Name box, enter a name for this rule using the following format:
- <div style="margin-right: 150px;">
+    <div style="margin-right: 150px;">
    
          <inject key="ODLUser"></inject>-dspmlab-meta
    
