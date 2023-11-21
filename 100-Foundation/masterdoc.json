@@ -7,17 +7,21 @@
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/labaccess.md",
         "Order": 1
       },
-	     {
+	    {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-intro.md",
         "Order": 2
       },
 	     {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-data-classifier.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-meta-class.md",
         "Order": 3
+      },
+	     {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-data-classifier.md",
+        "Order": 4
       },
 	 {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/wiz-training/data-security-in-wiz/main/100-Foundation/dspm-overview-create-control.md",
-        "Order": 4
+        "Order": 5
       }
     ]
   }
