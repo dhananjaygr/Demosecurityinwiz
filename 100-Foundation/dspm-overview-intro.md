@@ -20,4 +20,6 @@ For a refresher on DSPM features in Wiz, see the following:
 <br>
 You work for a military contractor that is required to tag all content with an appropriate sensitivity level. As they do not work on top secret projects, they are only required to tag  content using a "Secret", "Confidential", or "Unclassified" sensitivity label. There is an S3 bucket, named s3-fileshare-rbm, where they have been storing files.
 
+They also have a process for identifying any in progress patent applications. They wish to know where any such files are stored so they can ensure adequate protections are in place.
+
 </div>
