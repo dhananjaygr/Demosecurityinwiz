@@ -34,9 +34,8 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 <br/>As we are focused on proprietary information, this rule does not match known definitions, such as PHI or PII. As these types are used as filters in other pages, strive to keep them as accurate as possible.
 
  <p align="left">
-       <img width="60%" alt="Metadata Classifier Rule Properties" src="img/meta-data-class-descript.png"/>
+       <img width="60%" alt="Metadata Classifier Rule Properties" border=1 src="img/meta-data-class-descript.png"/>
  </p>
-<!-- ![Metadata Classifier Rule Properties](img/meta-data-class-descript.png) -->
 
 1. From the Severity dropdown box, select **Critical**.
 <br/>Severity of the data classifier is only part of the formula used to designate the severity of a related data finding. Remember, it also considers the number of unique occurrences.
@@ -53,7 +52,7 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 1. In the Minimum file size box, enter **1** and select **KB** in the Bytes drop down. 
 <br/>**Tip:** Wiz recommends that you define a minimum file size to reduce the likelihood of false positives.
 <p align="left">
-       <img width="60%" alt="Metadata Match Properties"src="img/meta-data-match-criteria.png"/>
+       <img width="60%" alt="Metadata Match Properties" border=1 src="img/meta-data-match-criteria.png"/>
  </p>
 <!-- ![Metadata Match Properties](img/meta-data-match-criteria.png) -->
 
@@ -83,8 +82,7 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 1. Under Has alerting Data Findings, scroll through the list of findings until you see a match for the rule that you defined. You may have to click **Load more** to see your results. 
 <br/><ins>Expected Result:</ins> You find a match for two files in the data findings. If you expand that finding, you should see matches for files that include "draft-patent-filing" in the title.
 <p align="left">
-       <img width="60%" alt="Metadata Classifier Results" src="img/dspm-meta-data-class-results.png"/>
+       <img width="60%" alt="Metadata Classifier Results" border=1 src="img/dspm-meta-data-class-results.png"/>
  </p>
-<!-- ![Metadata Classifier Results](img/dspm-meta-data-class-results.png) -->
 
 </div>
