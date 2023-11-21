@@ -20,7 +20,12 @@ Once the rule is defined and the bucket is rescanned, we will see some findings 
 
 1. Under Classification Type, select **Metadata match**.
 
-1. In the Name box, enter a name for this rule using the following format *\<login-username\>-dspmlab-meta* (for example, odl_user_#####-dspmlab-meta).
+1. In the Name box, enter a name for this rule using the following format:
+ <div style="margin-right: 150px;">
+   
+         <inject key="ODLUser"></inject>-dspmlab-meta
+   
+      </div>
 
 1. (Optional) In the Description box, enter a description for the rule.
 <br/>Use this field to provide context for other users. While unnecessary for this lab, best practice states the purpose of the rule and use cases that it is expected to address. For example, "Identify working patent documents that are not submitted or pending. The intention is to prevent accidental public exposure of such material prior to patent submission. Expected to scan Word, PDF, and text file titles with our required title string 'draft-patent-filing'."
