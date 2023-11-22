@@ -1,10 +1,8 @@
 <div style="margin-right: 50px; margin-left: 30px;">
 
 # Exercise: Create a custom data classifier
-___
 
 ## Scope
-<br>
 In this exercise, we create three custom data classifiers to scan files for each sensitivity level. These rules generate data finding on the resource where such a file is detected. 
 The task flow is as follows:
 
@@ -12,17 +10,14 @@ The task flow is as follows:
 * Second, we rescan the bucket resource to see if our rules fire on any of its contents.
 * Last, we verify our rules by reviewing the finding results. 
 
-<br>
 
 ## Expected Outcomes
 
 Once the rules are defined and the bucket is rescanned, we will see some findings for the data classifiers. 
 
-<br>
 
 ## Task 1. For each rule, follow these steps to create the data classifier rule
 
-<br>
 
 1. In the Wiz portal, navigate to **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 
@@ -89,11 +84,9 @@ Once the rules are defined and the bucket is rescanned, we will see some finding
 * Set the Minimum unique matches to **1**.
 * From the Masking list, select **Partial Mask**.
 
-<br>
 
 ## Task 2. Scan the bucket to test your finding
 
-<br>
 
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 
