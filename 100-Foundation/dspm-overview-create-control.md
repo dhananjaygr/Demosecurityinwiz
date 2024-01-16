@@ -1,7 +1,6 @@
 <div style="margin-right: 50px; margin-left: 30px;">
 
 # Exercise: Create a control for data resources that are not in compliance with the data classification labeling
-___
 
 Your manager wants you to ensure all files that stored with one of the required sensitivity label. Generate a control that alerts when a bucket contains a file that does not contain one of the required sensitivity levels.
 
@@ -16,12 +15,11 @@ The tasks to perform are as follows:
 * Last, review the results to determine whether the control finds data stores with data but where that data does not match our neew rule. This results means the data has not been properly tagged.
 
 ## Expected Outcomes
-<br>
 
 Once the rules are defined and the bucket is rescanned, we will see some data stores where the data has not been properly tagged. These reults indicate an all or nothing. In other words, if some of the resources are tagged, we won't match the control criteria. If none of them are tagged correctly, we will. 
 
 ## Task 1. Create the data classifier rule that matches on any of the supported classification levels
-<br>
+
 
 1. In the Wiz portal, navigate to **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
 
@@ -65,11 +63,10 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click **Create rule** to save the rule in the Wiz tenant.
 
-<br>
+
 
 ## Task 2. Scan the bucket to test your finding
 
-<br>
 
 1. In the Wiz portal, navigate to **Explorer > Security Graph**.
 
@@ -95,11 +92,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Close the bucket drawer.
 
-<br>
+
 
 ## Task 3. Define the control
 
-<br>
+
 
 1. In the Security Graph page, click on **New**.
 
@@ -181,7 +178,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
     **Note:** In some cases, issues may take up to 24 hours to appear in the portal. 
 
-<br>
+
 
 ### END OF LAB
 
