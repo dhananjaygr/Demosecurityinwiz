@@ -1,4 +1,4 @@
-<div style="margin-right: 50px; margin-left: 30px; font-size: 50px;">
+<div style="margin-right: 50px; margin-left: 30px; font-size: 250px;">
  
 # Accessing your lab environment
 
