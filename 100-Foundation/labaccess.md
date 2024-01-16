@@ -1,5 +1,5 @@
 <div style="margin-right: 50px; margin-left: 30px;">
-
+ 
 # Accessing your lab environment
 
 In this lab, you will be given access to the Wiz-Labs Wiz tenant, where you will perform the exercises. 
